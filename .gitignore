@@ -1,0 +1,17 @@
+# KiCad backups and caches
+*-backups/
+*.bak
+*.bck
+*.kicad_prl
+*.lck
+~*.lck
+_autosave-*
+fp-info-cache
+*.kicad_sch-bak
+*.kicad_pcb-bak
+\#auto_saved_files#
+
+# Fabrication outputs (uncomment to exclude)
+# gerbers/
+# *.gbr
+# *.drl
