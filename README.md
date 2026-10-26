@@ -16,12 +16,13 @@ The goal is a compact board that can sit near each joint actuator and drive its 
 | `nexus_drive.kicad_sch` | Schematic |
 | `nexus_drive.kicad_pcb` | PCB layout |
 | `.gitignore` | Keeps KiCad backups, autosaves, lock files and caches out of the repo |
+| [`docs/power-stage.md`](docs/power-stage.md) | Power stage design notes: gate driver, MOSFET bridge, overvoltage protection, current and voltage sensing, layout rules |
 
 Folders for fabrication outputs (Gerbers, BOM, pick-and-place), datasheets and firmware will be added as the design matures.
 
 ## Design goals
 
-These are the intended targets. Exact values are **TBD** and will be updated as we choose parts.
+These are the intended targets. Values still marked **TBD** will be filled in as we choose parts. The power stage is described in detail in [docs/power-stage.md](docs/power-stage.md).
 
 - **Motor type:** Brushless DC / PMSM motors used in humanoid joint actuators
 - **Control:** Field-oriented control (FOC) for smooth, quiet torque control
@@ -34,10 +35,13 @@ These are the intended targets. Exact values are **TBD** and will be updated as 
 
 | Parameter | Target |
 | --- | --- |
-| Supply voltage | TBD |
-| Continuous / peak phase current | TBD |
+| Battery | 12S3P Li-ion / LiPo: 36–50.4 V (44–48 V nominal) |
+| Continuous / peak phase current | TBD (depends on the motor) |
 | Microcontroller | TBD |
-| Gate driver / power stage | TBD |
+| Gate driver | TI DRV8353S (SPI-configured, integrated current-sense amplifiers) |
+| MOSFETs | 6 × onsemi FDMT80080DC (80 V, 1.35 mΩ) |
+| Current sensing | 3 low-side shunts (value TBD) |
+| Overvoltage protection | Input TVS, bulk capacitor, 100 V ceramic DC-link bank, anti-spark connector |
 | Encoder interface | TBD |
 | Communication | TBD |
 | Board dimensions | TBD |
@@ -60,8 +64,8 @@ Then open `nexus_drive.kicad_pro` in KiCad.
 ## Roadmap
 
 - [x] Create the KiCad project and repository
-- [ ] Define the specifications (voltage, current, motor type)
-- [ ] Choose the main parts (MCU, gate driver, MOSFETs, current sensing, encoder)
+- [ ] Define the specifications (battery voltage ✅, motor current, motor type)
+- [ ] Choose the main parts (gate driver ✅, MOSFETs ✅, MCU, shunts, encoder)
 - [ ] Draw the schematic
 - [ ] Lay out the PCB
 - [ ] Run design review, DRC and ERC
