@@ -83,8 +83,19 @@ The phase power section has been copied into the schematic from the moteus x1 (s
 |---|---|
 | `H Bridge A/B/C` (`h_bridge.kicad_sch`, 3 instances) | High-side + low-side FDMT80080DC; 0.5 mΩ 2512 low-side shunt; 0.1 µF 100 V 1812 cap from V+ to the low-side source; BAT41KFILM Schottky from the low-side gate to GNDPWR (clamps negative gate undershoot); net ties for Kelvin sensing (shunt top → SPx, GNDPWR → SNx); M2.5 screw pad for the phase output |
 | `Bulk Capacitance` (`bulk_capacitance.kicad_sch`) | 36 × 4.7 µF 100 V 1206 ceramics between V+ and GNDPWR |
+| `Gate Driver` (`gate_driver.kicad_sch`) | DRV8353SRTAR (U5) with its support parts: 47 nF 100 V charge-pump flying cap (CPH–CPL), 1 µF 25 V VCP cap to V+, 1 µF VGLS, 1 µF DVDD, 1 µF VREF, 0.1 µF 100 V VM decoupling, 2 kΩ pull-ups on SDO and nFAULT |
+| `Current Sense` (`current_sense.kicad_sch`) | 22 Ω + 1 nF RC filter on each DRV8353S current-amplifier output (CURx → FCURx to the MCU ADC) |
 
-Nets on the root sheet: `GHx`, `SHx` (= phase output), `GLx`, `SPx`, `SNx` for x = A/B/C. These go to the DRV8353S sheet when it is added; until then ERC reports them as unconnected. Bus nets are the global labels `V+` and `GNDPWR`.
+The netlist of these sheets was checked pin-for-pin against moteus x1 (122 pins, no differences).
+
+How the gate driver is wired (as on moteus x1):
+- **VDRAIN** senses V+ (used for the high-side VDS overcurrent monitor and charge pump). **VM** (driver supply) comes from the **`+12V`** rail, not from the battery. This keeps driver dissipation low but means the logic-power sheet must provide +12 V.
+- **3x PWM mode:** `MOTOR1/2/3` → INHA/B/C carry the PWM; INLA/B/C are tied together as `MOTOR_HIZ` (low = phase high-impedance). `MOTOR_ENABLE` → ENABLE.
+- **SPI + fault:** `DRV8323_MOSI/MISO/SCLK/CS` and `DRV8323_FAULT`. moteus kept the older DRV8323 names; they connect to the DRV8353S.
+- **Current-sense mapping is crossed:** `CUR1` = SOC (phase C), `CUR2` = SOB, `CUR3` = SOA (phase A). Firmware must match this.
+- `VREF` is the `+3V` rail (3.3 V on moteus), so the bidirectional amplifier outputs are centred on VREF/2.
+
+Nets on the root sheet: `GHx`, `SHx` (= phase output), `GLx`, `SPx`, `SNx` for x = A/B/C link the driver and the bridges. The MCU-side nets (`MOTOR*`, `DRV8323_*`, `FCUR1-3`) and the global supplies `+12V`, `+3V`, `GND` are unconnected until the MCU and logic-power sheets are added, so ERC reports them. Bus nets are the global labels `V+` and `GNDPWR`.
 
 Deliberately not changed yet: the 0.5 mΩ shunt (still TBD, see Sensing), and no gate resistors or gate pull-downs (moteus has none; see Layout rules).
 

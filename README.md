@@ -16,6 +16,8 @@ The goal is a compact board that can sit near each joint actuator and drive its 
 | `nexus_drive.kicad_sch` | Root schematic sheet |
 | `h_bridge.kicad_sch` | One half-bridge (MOSFETs, shunt, phase output), used 3× for phases A/B/C |
 | `bulk_capacitance.kicad_sch` | Ceramic DC-link capacitor bank |
+| `gate_driver.kicad_sch` | DRV8353S gate driver and support parts |
+| `current_sense.kicad_sch` | RC filters on the current-sense amplifier outputs |
 | `lib/` | Project-local symbol and footprint libraries (`moteus`) |
 | `NOTICE.md`, `LICENSES/` | Attribution for files derived from mjbots moteus (Apache-2.0) |
 | `nexus_drive.kicad_pcb` | PCB layout |
@@ -70,7 +72,7 @@ Then open `nexus_drive.kicad_pro` in KiCad.
 - [x] Create the KiCad project and repository
 - [ ] Define the specifications (battery voltage ✅, motor current, motor type)
 - [ ] Choose the main parts (gate driver ✅, MOSFETs ✅, MCU, shunts, encoder)
-- [ ] Draw the schematic (phase power section ✅, from moteus x1)
+- [ ] Draw the schematic (phase power section ✅, gate driver ✅, from moteus x1)
 - [ ] Lay out the PCB
 - [ ] Run design review, DRC and ERC
 - [ ] Order and assemble the first prototype

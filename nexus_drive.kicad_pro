@@ -166,6 +166,14 @@
       {
         "netclass": "Current Sense",
         "pattern": "/SNC"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/Gate Driver/CPH"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/Gate Driver/CPL"
       }
     ]
   }
