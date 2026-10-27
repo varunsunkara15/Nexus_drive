@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "moteus")(type "KiCad")(uri "${KIPRJMOD}/lib/moteus.pretty")(options "")(descr "Footprints copied from mjbots moteus (Apache-2.0)"))
+)

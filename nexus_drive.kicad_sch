@@ -4,7 +4,722 @@
 	(generator_version "10.0")
 	(uuid 2d97709d-a8ce-4889-9b37-2fa808653238)
 	(paper "A4")
+	(title_block
+		(title "Nexus Drive")
+		(rev "A")
+		(comment 1 "Humanoid joint BLDC/PMSM FOC driver")
+	)
 	(lib_symbols)
+	(sheet
+		(at 101.6 50.8)
+		(size 19.05 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e54c5578-fae3-4911-a296-59c945d84f23")
+		(property "Sheetname" "H Bridge A"
+			(at 101.6 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "h_bridge.kicad_sch"
+			(at 101.6 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GHX" input
+			(at 101.6 53.34 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "be51afe8-1a2c-4bf2-8496-22cb97ca4b6e")
+		)
+		(pin "SHX" input
+			(at 101.6 57.15 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "201bc7f6-206e-4841-8ac8-1f82d8fb652a")
+		)
+		(pin "GLX" input
+			(at 101.6 60.96 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b0b301e1-9d25-4f3b-b497-cb1fd2757535")
+		)
+		(pin "SPX" input
+			(at 101.6 64.77 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a16d4745-0a6b-42ea-9d65-213477fd9488")
+		)
+		(pin "SNX" input
+			(at 101.6 68.58 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "4ce94436-2d2b-44b3-94ee-38d8341536ff")
+		)
+		(instances
+			(project "nexus_drive"
+				(path "/2d97709d-a8ce-4889-9b37-2fa808653238"
+					(page "2")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 93.98 53.34) (xy 101.6 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c448433-ec7e-4102-9c11-ab332ae299f4")
+	)
+	(label "GHA"
+		(at 93.98 53.34 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "2d46cb3d-cd54-41c1-9026-8f472ef66d2e")
+	)
+	(wire
+		(pts
+			(xy 93.98 57.15) (xy 101.6 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "594ce7c9-a807-46e9-95fc-f07b150d4caa")
+	)
+	(label "SHA"
+		(at 93.98 57.15 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "58706cb0-3daf-4a91-b13e-713dab6c3f67")
+	)
+	(wire
+		(pts
+			(xy 93.98 60.96) (xy 101.6 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9ccf4cb-da8d-4ada-89c2-f17f4693586f")
+	)
+	(label "GLA"
+		(at 93.98 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "6db36f52-082d-42ab-9bb3-ae1457bfe710")
+	)
+	(wire
+		(pts
+			(xy 93.98 64.77) (xy 101.6 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2759911-56ad-41bb-bc1b-4652a7efb51a")
+	)
+	(label "SPA"
+		(at 93.98 64.77 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "0760a8fa-eaca-4405-acd6-395d92ccb10a")
+	)
+	(wire
+		(pts
+			(xy 93.98 68.58) (xy 101.6 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27e285f4-1820-41bf-a085-8a91ea092c90")
+	)
+	(label "SNA"
+		(at 93.98 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "f3b379a1-73c1-4350-92b3-e94ccab83520")
+	)
+	(sheet
+		(at 152.39999999999998 50.8)
+		(size 19.05 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "84723ca0-3c55-4a96-8456-927d28db47e5")
+		(property "Sheetname" "H Bridge B"
+			(at 152.39999999999998 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "h_bridge.kicad_sch"
+			(at 152.39999999999998 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GHX" input
+			(at 152.39999999999998 53.34 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b2f0e23a-5be9-4248-8a23-60fbdf8ba037")
+		)
+		(pin "SHX" input
+			(at 152.39999999999998 57.15 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f31a6cc8-d286-4f2f-901e-0619e2af730a")
+		)
+		(pin "GLX" input
+			(at 152.39999999999998 60.96 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e6cb520d-bc65-4d5a-91ab-fd322dd35f5f")
+		)
+		(pin "SPX" input
+			(at 152.39999999999998 64.77 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "493eec0f-3a69-4954-bbd9-c765a3c150ce")
+		)
+		(pin "SNX" input
+			(at 152.39999999999998 68.58 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "2ff29df7-8c0f-4014-94d8-e61178671648")
+		)
+		(instances
+			(project "nexus_drive"
+				(path "/2d97709d-a8ce-4889-9b37-2fa808653238"
+					(page "3")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 144.78 53.34) (xy 152.39999999999998 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "853af6c8-1b15-4efc-8d7c-bc63e1531db5")
+	)
+	(label "GHB"
+		(at 144.78 53.34 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "928dfa1a-fb9f-483f-a864-26af49e8612c")
+	)
+	(wire
+		(pts
+			(xy 144.78 57.15) (xy 152.39999999999998 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c084fc17-614f-4ffd-a875-c8eb41f15861")
+	)
+	(label "SHB"
+		(at 144.78 57.15 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "62fb4928-f85d-4916-8ffa-bef9e28c7972")
+	)
+	(wire
+		(pts
+			(xy 144.78 60.96) (xy 152.39999999999998 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e45ae4a5-8da8-4456-9e61-ab0625b4e010")
+	)
+	(label "GLB"
+		(at 144.78 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "05b646e4-f277-4425-bd09-5a9c46f00f19")
+	)
+	(wire
+		(pts
+			(xy 144.78 64.77) (xy 152.39999999999998 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e28ae200-ee3e-48b3-909f-b1db03fd946e")
+	)
+	(label "SPB"
+		(at 144.78 64.77 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "43f36a5b-62e5-4707-a2b3-f5b73d5076ba")
+	)
+	(wire
+		(pts
+			(xy 144.78 68.58) (xy 152.39999999999998 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97f0d37a-a6af-4c33-8fe1-d4a37e433e5c")
+	)
+	(label "SNB"
+		(at 144.78 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "15e56329-37bd-4a4b-b2d4-b4f926e48b5f")
+	)
+	(sheet
+		(at 203.2 50.8)
+		(size 19.05 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "925a84d2-19c0-462d-bae4-aa3034c06df6")
+		(property "Sheetname" "H Bridge C"
+			(at 203.2 50.0884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "h_bridge.kicad_sch"
+			(at 203.2 71.7046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GHX" input
+			(at 203.2 53.34 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "766d1eae-b45e-4937-b7eb-6b8511976887")
+		)
+		(pin "SHX" input
+			(at 203.2 57.15 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1d265923-f909-44d8-9586-ebbbe53b7f78")
+		)
+		(pin "GLX" input
+			(at 203.2 60.96 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "d2913e43-5771-41a5-a586-0c714e71a212")
+		)
+		(pin "SPX" input
+			(at 203.2 64.77 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "512147bd-a9d2-4990-8954-f4fc542ae0cb")
+		)
+		(pin "SNX" input
+			(at 203.2 68.58 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "d53e061e-78b7-4f62-b680-4dda8cc67833")
+		)
+		(instances
+			(project "nexus_drive"
+				(path "/2d97709d-a8ce-4889-9b37-2fa808653238"
+					(page "4")
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 195.58 53.34) (xy 203.2 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9091cbbc-fe0d-44aa-a56a-8ef7dabed242")
+	)
+	(label "GHC"
+		(at 195.58 53.34 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "c879ba4d-6eed-4756-b973-c9c582d98a38")
+	)
+	(wire
+		(pts
+			(xy 195.58 57.15) (xy 203.2 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82d2d4b8-0d34-426d-899f-263fc4ec2976")
+	)
+	(label "SHC"
+		(at 195.58 57.15 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "98af2fcb-4563-43a6-a147-8de4cbfd1be3")
+	)
+	(wire
+		(pts
+			(xy 195.58 60.96) (xy 203.2 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b556d87-c221-4989-b414-9ca9df7f209f")
+	)
+	(label "GLC"
+		(at 195.58 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "7596d7f2-ec6f-48f7-8a11-a888b228a3d5")
+	)
+	(wire
+		(pts
+			(xy 195.58 64.77) (xy 203.2 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8313f3c-c660-418f-863d-350f67a6de4f")
+	)
+	(label "SPC"
+		(at 195.58 64.77 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "4a0d5f19-23d1-4b73-bc53-2629d34f89e1")
+	)
+	(wire
+		(pts
+			(xy 195.58 68.58) (xy 203.2 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e47bb9b3-f019-49d3-abb2-d4d33d31f045")
+	)
+	(label "SNC"
+		(at 195.58 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right bottom)
+			)
+		(uuid "cc7697d4-d826-4478-b39d-70a28559c892")
+	)
+	(sheet
+		(at 101.6 99.06)
+		(size 19.05 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "87da30b6-f12f-4b45-8295-412e1241022b")
+		(property "Sheetname" "Bulk Capacitance"
+			(at 101.6 98.3484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "bulk_capacitance.kicad_sch"
+			(at 101.6 109.8046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "nexus_drive"
+				(path "/2d97709d-a8ce-4889-9b37-2fa808653238"
+					(page "5")
+				)
+			)
+		)
+	)
+	(text "PHASE POWER STAGE"
+		(exclude_from_sim no)
+		(at 25.4 30.48 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left bottom)
+		)
+		(uuid "fecedcda-5040-439f-862d-603ae257201f")
+	)
+	(text "Each H Bridge sheet = one half-bridge: 2x FDMT80080DC (80 V), 0.5 mOhm low-side shunt,"
+		(exclude_from_sim no)
+		(at 25.4 127.0 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "377163f6-2507-4540-aa22-0481fa8e92fd")
+	)
+	(text "0.1 uF 100 V local decoupling, BAT41 low-side gate clamp, Kelvin net ties to SPx/SNx, M2.5 phase output pad."
+		(exclude_from_sim no)
+		(at 25.4 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e7f719d-ad43-4280-9cb4-e029387b189f")
+	)
+	(text "Bulk Capacitance = 36x 4.7 uF 100 V X7R DC-link bank between V+ and GNDPWR (global nets)."
+		(exclude_from_sim no)
+		(at 25.4 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cb0bd0f7-1cd1-4acd-9b6e-fb05864a2be6")
+	)
+	(text "GHx/SHx/GLx/SPx/SNx connect to the DRV8353S gate driver sheet (to be added)."
+		(exclude_from_sim no)
+		(at 25.4 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5eb88124-5ec9-472b-b888-ba96ad574977")
+	)
+	(text "Copied from mjbots moteus-x1 r1 (Apache-2.0): https://github.com/mjbots/moteus/tree/main/hw/x1"
+		(exclude_from_sim no)
+		(at 25.4 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "daf2c6aa-f30f-4062-95ec-37017ed369e8")
+	)
+	(text "Still to add (see docs/power-stage.md): input TVS, bulk electrolytic, anti-spark connector, voltage dividers."
+		(exclude_from_sim no)
+		(at 25.4 146.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "97cd715c-df73-449a-9f33-7e04c7d7fe64")
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")

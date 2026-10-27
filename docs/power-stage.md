@@ -75,6 +75,19 @@ Also:
 - Route each high-side gate trace alongside its phase return; keep gate loops short.
 - Optional footprints: 0 Ω series gate resistors and 10–100 kΩ gate-to-source pull-downs.
 
+## Schematic status
+
+The phase power section has been copied into the schematic from the moteus x1 (see [NOTICE.md](../NOTICE.md)):
+
+| Sheet | Contents (per instance) |
+|---|---|
+| `H Bridge A/B/C` (`h_bridge.kicad_sch`, 3 instances) | High-side + low-side FDMT80080DC; 0.5 mΩ 2512 low-side shunt; 0.1 µF 100 V 1812 cap from V+ to the low-side source; BAT41KFILM Schottky from the low-side gate to GNDPWR (clamps negative gate undershoot); net ties for Kelvin sensing (shunt top → SPx, GNDPWR → SNx); M2.5 screw pad for the phase output |
+| `Bulk Capacitance` (`bulk_capacitance.kicad_sch`) | 36 × 4.7 µF 100 V 1206 ceramics between V+ and GNDPWR |
+
+Nets on the root sheet: `GHx`, `SHx` (= phase output), `GLx`, `SPx`, `SNx` for x = A/B/C. These go to the DRV8353S sheet when it is added; until then ERC reports them as unconnected. Bus nets are the global labels `V+` and `GNDPWR`.
+
+Deliberately not changed yet: the 0.5 mΩ shunt (still TBD, see Sensing), and no gate resistors or gate pull-downs (moteus has none; see Layout rules).
+
 ## Open items
 
 - [ ] Motor continuous and peak phase current → shunt value and thermal design
