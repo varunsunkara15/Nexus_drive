@@ -10,7 +10,6 @@ moteus is licensed under the Apache License, Version 2.0. A copy is in [LICENSES
 | File in this repo | Source in moteus | Changes |
 | --- | --- | --- |
 | `h_bridge.kicad_sch` | `hw/x1/h_bridge.kicad_sch` | Retargeted sheet instances to this project, changed title block |
-| `bulk_capacitance.kicad_sch` | `hw/x1/bulk_capacitance.kicad_sch` | Retargeted sheet instances to this project, changed title block |
 | `gate_driver.kicad_sch` | `hw/x1/gate_driver.kicad_sch` | Retargeted sheet instances to this project, changed title block |
 | `current_sense.kicad_sch` | `hw/x1/current_sense.kicad_sch` | Retargeted sheet instances to this project, changed title block |
 | `lib/moteus.pretty/*.kicad_mod` | `hw/x1/moteus.pretty/` | Unmodified copies of `NetTie-2_SMD_Pad0.2`, `POWER_M2.5`, `SOD-523_STM`, `RTA0040B` |

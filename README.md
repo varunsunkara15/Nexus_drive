@@ -15,7 +15,6 @@ The goal is a compact board that can sit near each joint actuator and drive its 
 | `nexus_drive.kicad_pro` | KiCad project file |
 | `nexus_drive.kicad_sch` | Root schematic sheet |
 | `h_bridge.kicad_sch` | One half-bridge (MOSFETs, shunt, phase output), used 3× for phases A/B/C |
-| `bulk_capacitance.kicad_sch` | Ceramic DC-link capacitor bank |
 | `gate_driver.kicad_sch` | DRV8353S gate driver and support parts |
 | `current_sense.kicad_sch` | RC filters on the current-sense amplifier outputs |
 | `lib/` | Project-local symbol and footprint libraries (`moteus`) |
@@ -51,6 +50,16 @@ These are the intended targets. Values still marked **TBD** will be filled in as
 | Encoder interface | TBD |
 | Communication | TBD |
 | Board dimensions | TBD |
+
+### Note: bulk capacitance on the battery bus
+
+The power stage in this repo has **no bulk / DC-link capacitor bank yet**. It is owned by another team member and must be added before the board is built. The reference design (moteus x1) uses 36 × 4.7 µF 100 V ceramics. A **bulk electrolytic (or tantalum) capacitor** at the power input may also be needed. Reasons:
+
+- **Hot-plug ringing:** a bank of only ceramics has very low ESR. Together with the battery cable's inductance, it can ring up to ~2× the battery voltage when the battery is plugged in (~100 V on a 50.4 V pack), above the 80 V MOSFET rating. An electrolytic's higher ESR (≈ 0.05–0.1 Ω) damps this ringing.
+- **Ceramics lose capacitance under DC bias:** 100 V X7R ceramics keep only about 30–50 % of their rated value at 50 V, so the real bus capacitance is much lower than the printed value.
+- **Regen and load steps:** a larger capacitor absorbs some regenerative braking energy and supplies current during fast load changes, reducing bus voltage swings.
+
+Guidance: rated **80 V or higher** (63 V is the bare minimum), capacitance several times the effective ceramic bank (e.g. 330–470 µF total), ESR ≈ 0.05–0.1 Ω, placed between the input connector and the half-bridges. **Tantalum is not recommended at this voltage:** tantalums need ~2× voltage derating (a >100 V part is hard to find), and they tend to fail short-circuit, which is a fire risk on a stiff 12S3P pack. Aluminium electrolytic or hybrid polymer is the safer choice. See [docs/power-stage.md](docs/power-stage.md) for the full overvoltage-protection requirements.
 
 ## Getting started
 

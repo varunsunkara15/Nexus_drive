@@ -1739,48 +1739,6 @@
 			)
 		(uuid "469ffce2-9f54-4ffa-b5ca-a11ddd2f16a7")
 	)
-	(sheet
-		(at 165.1 99.06)
-		(size 19.05 10.16)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "87da30b6-f12f-4b45-8295-412e1241022b")
-		(property "Sheetname" "Bulk Capacitance"
-			(at 165.1 98.3484 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "bulk_capacitance.kicad_sch"
-			(at 165.1 109.8046 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "nexus_drive"
-				(path "/2d97709d-a8ce-4889-9b37-2fa808653238"
-					(page "7")
-				)
-			)
-		)
-	)
 	(text "PHASE POWER STAGE"
 		(exclude_from_sim no)
 		(at 25.4 30.48 0)
@@ -1836,7 +1794,7 @@
 		)
 		(uuid "63d7a9ad-374f-4a58-a458-a8cc4b8d162c")
 	)
-	(text "Bulk Capacitance = 36x 4.7 uF 100 V X7R DC-link bank between V+ and GNDPWR."
+	(text "DC-link / bulk capacitance is not in this section (owned by another team member); see README."
 		(exclude_from_sim no)
 		(at 25.4 205.74 0)
 		(effects

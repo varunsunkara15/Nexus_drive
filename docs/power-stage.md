@@ -82,11 +82,12 @@ The phase power section has been copied into the schematic from the moteus x1 (s
 | Sheet | Contents (per instance) |
 |---|---|
 | `H Bridge A/B/C` (`h_bridge.kicad_sch`, 3 instances) | High-side + low-side FDMT80080DC; 0.5 mΩ 2512 low-side shunt; 0.1 µF 100 V 1812 cap from V+ to the low-side source; BAT41KFILM Schottky from the low-side gate to GNDPWR (clamps negative gate undershoot); net ties for Kelvin sensing (shunt top → SPx, GNDPWR → SNx); M2.5 screw pad for the phase output |
-| `Bulk Capacitance` (`bulk_capacitance.kicad_sch`) | 36 × 4.7 µF 100 V 1206 ceramics between V+ and GNDPWR |
 | `Gate Driver` (`gate_driver.kicad_sch`) | DRV8353SRTAR (U5) with its support parts: 47 nF 100 V charge-pump flying cap (CPH–CPL), 1 µF 25 V VCP cap to V+, 1 µF VGLS, 1 µF DVDD, 1 µF VREF, 0.1 µF 100 V VM decoupling, 2 kΩ pull-ups on SDO and nFAULT |
 | `Current Sense` (`current_sense.kicad_sch`) | 22 Ω + 1 nF RC filter on each DRV8353S current-amplifier output (CURx → FCURx to the MCU ADC) |
 
-The netlist of these sheets was checked pin-for-pin against moteus x1 (122 pins, no differences).
+The netlist of these sheets was checked pin-for-pin against moteus x1 (no differences apart from the removed DC-link bank).
+
+**Not included:** the ceramic DC-link bank (moteus: 36 × 4.7 µF 100 V) and any bulk electrolytic. These are owned by another team member; see the note in the [README](../README.md#note-bulk-capacitance-on-the-battery-bus). Only the 0.1 µF local capacitor in each half-bridge and the gate driver's own support capacitors are on these sheets.
 
 How the gate driver is wired (as on moteus x1):
 - **VDRAIN** senses V+ (used for the high-side VDS overcurrent monitor and charge pump). **VM** (driver supply) comes from the **`+12V`** rail, not from the battery. This keeps driver dissipation low but means the logic-power sheet must provide +12 V.
