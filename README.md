@@ -4,28 +4,33 @@
 
 The goal is a compact board that can sit near each joint actuator and drive its motor accurately and efficiently. It should also report back to the robot's main controller.
 
-> **Status:** 🚧 Early development. The KiCad project is set up, but the schematic and PCB layout have not been started.
+> **Status:** 🚧 Early development. Schematic in progress (power stage, gate driver and MCU connections done); PCB layout not started.
 
 ---
 
-## Repository contents
+## Repository layout
 
-| File | Description |
-| --- | --- |
-| `nexus_drive.kicad_pro` | KiCad project file |
-| `nexus_drive.kicad_sch` | Root schematic sheet |
-| `h_bridge.kicad_sch` | One half-bridge (MOSFETs, shunt, phase output), used 3× for phases A/B/C |
-| `gate_driver.kicad_sch` | DRV8353S gate driver and support parts |
-| `current_sense.kicad_sch` | RC filters on the current-sense amplifier outputs |
-| `stm32g474.kicad_sch` | STM32G474METx MCU, wired to the pin plan |
-| `Comms Component Selection.ioc` | STM32CubeMX pin assignment for the MCU |
-| `lib/` | Project-local symbol and footprint libraries (`moteus`) |
-| `NOTICE.md`, `LICENSES/` | Attribution for files derived from mjbots moteus (Apache-2.0) |
-| `nexus_drive.kicad_pcb` | PCB layout |
-| `.gitignore` | Keeps KiCad backups, autosaves, lock files and caches out of the repo |
-| [`docs/power-stage.md`](docs/power-stage.md) | Power stage design notes: gate driver, MOSFET bridge, overvoltage protection, current and voltage sensing, layout rules |
+```
+Nexus_drive/
+├── hardware/                     KiCad 10 project (open nexus_drive.kicad_pro)
+│   ├── nexus_drive.kicad_pro     Project file
+│   ├── nexus_drive.kicad_sch     Root schematic sheet
+│   ├── gate_driver.kicad_sch     DRV8353S gate driver and support parts
+│   ├── h_bridge.kicad_sch        One half-bridge (MOSFETs, shunt, phase output), used 3× for phases A/B/C
+│   ├── current_sense.kicad_sch   RC filters on the current-sense amplifier outputs
+│   ├── stm32g474.kicad_sch       STM32G474METx MCU, wired to the pin plan
+│   ├── nexus_drive.kicad_pcb     PCB layout
+│   ├── fp-lib-table, sym-lib-table   Project library tables
+│   └── lib/                      Project-local symbol and footprint libraries (moteus)
+├── firmware/
+│   └── Comms Component Selection.ioc   STM32CubeMX pin assignment for the MCU
+├── docs/
+│   └── power-stage.md            Power stage design notes
+├── LICENSES/, NOTICE.md          Attribution for files derived from mjbots moteus (Apache-2.0)
+└── README.md
+```
 
-Folders for fabrication outputs (Gerbers, BOM, pick-and-place), datasheets and firmware will be added as the design matures.
+Folders for fabrication outputs (Gerbers, BOM, pick-and-place) and datasheets will be added as the design matures.
 
 ## Design goals
 
@@ -76,7 +81,7 @@ git clone https://github.com/varunsunkara15/Nexus_drive.git
 cd Nexus_drive
 ```
 
-Then open `nexus_drive.kicad_pro` in KiCad.
+Then open `hardware/nexus_drive.kicad_pro` in KiCad.
 
 ## Roadmap
 

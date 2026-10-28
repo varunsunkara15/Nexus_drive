@@ -77,7 +77,7 @@ Also:
 
 ## Schematic status
 
-The phase power section has been copied into the schematic from the moteus x1 (see [NOTICE.md](../NOTICE.md)):
+The phase power section has been copied into the schematic (sheets in [`hardware/`](../hardware/)) from the moteus x1 (see [NOTICE.md](../NOTICE.md)):
 
 | Sheet | Contents (per instance) |
 |---|---|
@@ -96,7 +96,7 @@ How the gate driver is wired:
 
 ## MCU connections
 
-The MCU sheet (`stm32g474.kicad_sch`) holds an **STM32G474METx (LQFP-80)** with the pin assignment from `Comms Component Selection.ioc`.
+The MCU sheet (`hardware/stm32g474.kicad_sch`) holds an **STM32G474METx (LQFP-80)** with the pin assignment from `firmware/Comms Component Selection.ioc`.
 
 | Net | MCU pin | Function | DRV8353S / circuit |
 |---|---|---|---|
