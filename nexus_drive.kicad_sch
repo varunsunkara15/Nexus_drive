@@ -1281,6 +1281,46 @@
 		)
 		(uuid "316b3070-944b-43a3-887f-31b23ae84ac7")
 	)
+	(wire
+		(pts
+			(xy 322.58 165.1) (xy 330.2 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42d56175-20e6-49dc-958e-b1fb7d3ee5a8")
+	)
+	(label "USART3_TX"
+		(at 322.58 165.1 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ac76e29a-3a27-401b-96d0-445d54d78f1a")
+	)
+	(wire
+		(pts
+			(xy 322.58 167.64) (xy 330.2 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f85bacc4-5426-4707-895f-d00700f19af7")
+	)
+	(label "USART3_RX"
+		(at 322.58 167.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a5774f19-336b-4138-853c-33e09a92578a")
+	)
 	(label "OSC_IN"
 		(at 322.58 160.02 180)
 		(effects
@@ -2013,7 +2053,7 @@
 	)
 	(sheet
 		(at 330.2 50.8)
-		(size 30.48 116.84)
+		(size 30.48 124.46)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2039,7 +2079,7 @@
 			)
 		)
 		(property "Sheetfile" "stm32g474.kicad_sch"
-			(at 330.2 168.2246 0)
+			(at 330.2 175.8446 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2472,6 +2512,26 @@
 		(pin "OSC_OUT" bidirectional
 			(at 330.2 162.56 180)
 			(uuid "4e07a656-8892-4952-82cf-d59f9091749c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USART3_TX" bidirectional
+			(at 330.2 165.1 180)
+			(uuid "65daf944-6a99-4ca4-a11a-1b9e7840b54f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USART3_RX" bidirectional
+			(at 330.2 167.64 180)
+			(uuid "00407848-da5f-4bb1-b267-5d1b374972b9")
 			(effects
 				(font
 					(size 1.27 1.27)
