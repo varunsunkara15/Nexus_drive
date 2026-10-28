@@ -17,6 +17,8 @@ The goal is a compact board that can sit near each joint actuator and drive its 
 | `h_bridge.kicad_sch` | One half-bridge (MOSFETs, shunt, phase output), used 3× for phases A/B/C |
 | `gate_driver.kicad_sch` | DRV8353S gate driver and support parts |
 | `current_sense.kicad_sch` | RC filters on the current-sense amplifier outputs |
+| `stm32g474.kicad_sch` | STM32G474METx MCU, wired to the pin plan |
+| `Comms Component Selection.ioc` | STM32CubeMX pin assignment for the MCU |
 | `lib/` | Project-local symbol and footprint libraries (`moteus`) |
 | `NOTICE.md`, `LICENSES/` | Attribution for files derived from mjbots moteus (Apache-2.0) |
 | `nexus_drive.kicad_pcb` | PCB layout |
@@ -42,7 +44,7 @@ These are the intended targets. Values still marked **TBD** will be filled in as
 | --- | --- |
 | Battery | 12S3P Li-ion / LiPo: 36–50.4 V (44–48 V nominal) |
 | Continuous / peak phase current | TBD (depends on the motor) |
-| Microcontroller | TBD |
+| Microcontroller | STM32G474METx (LQFP-80, 170 MHz Cortex-M4) |
 | Gate driver | TI DRV8353S (SPI-configured, integrated current-sense amplifiers) |
 | MOSFETs | 6 × onsemi FDMT80080DC (80 V, 1.35 mΩ) |
 | Current sensing | 3 low-side shunts (value TBD) |
@@ -80,8 +82,8 @@ Then open `nexus_drive.kicad_pro` in KiCad.
 
 - [x] Create the KiCad project and repository
 - [ ] Define the specifications (battery voltage ✅, motor current, motor type)
-- [ ] Choose the main parts (gate driver ✅, MOSFETs ✅, MCU, shunts, encoder)
-- [ ] Draw the schematic (phase power section ✅, gate driver ✅, from moteus x1)
+- [ ] Choose the main parts (gate driver ✅, MOSFETs ✅, MCU ✅, shunts, encoder)
+- [ ] Draw the schematic (phase power section ✅, gate driver ✅, MCU pin connections ✅)
 - [ ] Lay out the PCB
 - [ ] Run design review, DRC and ERC
 - [ ] Order and assemble the first prototype

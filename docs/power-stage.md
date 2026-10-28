@@ -85,18 +85,37 @@ The phase power section has been copied into the schematic from the moteus x1 (s
 | `Gate Driver` (`gate_driver.kicad_sch`) | DRV8353SRTAR (U5) with its support parts: 47 nF 100 V charge-pump flying cap (CPH–CPL), 1 µF 25 V VCP cap to V+, 1 µF VGLS, 1 µF DVDD, 1 µF VREF, 0.1 µF 100 V VM decoupling, 2 kΩ pull-ups on SDO and nFAULT |
 | `Current Sense` (`current_sense.kicad_sch`) | 22 Ω + 1 nF RC filter on each DRV8353S current-amplifier output (CURx → FCURx to the MCU ADC) |
 
-The netlist of these sheets was checked pin-for-pin against moteus x1 (no differences apart from the removed DC-link bank).
+The netlist of these sheets was checked pin-for-pin against moteus x1. The only differences are the removed DC-link bank and the 6-PWM change below.
 
 **Not included:** the ceramic DC-link bank (moteus: 36 × 4.7 µF 100 V) and any bulk electrolytic. These are owned by another team member; see the note in the [README](../README.md#note-bulk-capacitance-on-the-battery-bus). Only the 0.1 µF local capacitor in each half-bridge and the gate driver's own support capacitors are on these sheets.
 
-How the gate driver is wired (as on moteus x1):
-- **VDRAIN** senses V+ (used for the high-side VDS overcurrent monitor and charge pump). **VM** (driver supply) comes from the **`+12V`** rail, not from the battery. This keeps driver dissipation low but means the logic-power sheet must provide +12 V.
-- **3x PWM mode:** `MOTOR1/2/3` → INHA/B/C carry the PWM; INLA/B/C are tied together as `MOTOR_HIZ` (low = phase high-impedance). `MOTOR_ENABLE` → ENABLE.
-- **SPI + fault:** `DRV8323_MOSI/MISO/SCLK/CS` and `DRV8323_FAULT`. moteus kept the older DRV8323 names; they connect to the DRV8353S.
-- **Current-sense mapping is crossed:** `CUR1` = SOC (phase C), `CUR2` = SOB, `CUR3` = SOA (phase A). Firmware must match this.
-- `VREF` is the `+3V` rail (3.3 V on moteus), so the bidirectional amplifier outputs are centred on VREF/2.
+How the gate driver is wired:
+- **VDRAIN** senses V+ (used for the high-side VDS overcurrent monitor and charge pump). **VM** (driver supply) comes from the **`+12V`** rail, not from the battery (as on moteus x1). This keeps driver dissipation low but means the logic-power sheet must provide +12 V.
+- **6-PWM mode (changed from moteus):** moteus runs 3x PWM with INLA/B/C tied together as `MOTOR_HIZ`. Our MCU pin plan uses TIM1 complementary outputs, so INLA/B/C are split out. **Firmware must set the DRV8353S `PWM_MODE` register to 6x** and configure dead time in TIM1.
+- `VREF` is the `+3V` rail, so the bidirectional amplifier outputs are centred on VREF/2.
 
-Nets on the root sheet: `GHx`, `SHx` (= phase output), `GLx`, `SPx`, `SNx` for x = A/B/C link the driver and the bridges. The MCU-side nets (`MOTOR*`, `DRV8323_*`, `FCUR1-3`) and the global supplies `+12V`, `+3V`, `GND` are unconnected until the MCU and logic-power sheets are added, so ERC reports them. Bus nets are the global labels `V+` and `GNDPWR`.
+## MCU connections
+
+The MCU sheet (`stm32g474.kicad_sch`) holds an **STM32G474METx (LQFP-80)** with the pin assignment from `Comms Component Selection.ioc`.
+
+| Net | MCU pin | Function | DRV8353S / circuit |
+|---|---|---|---|
+| `PWM_AH` / `PWM_AL` | PA8 / PA7 | TIM1_CH1 / CH1N | INHA / INLA |
+| `PWM_BH` / `PWM_BL` | PA9 / PE10 | TIM1_CH2 / CH2N | INHB / INLB |
+| `PWM_CH` / `PWM_CL` | PA10 / PB1 | TIM1_CH3 / CH3N | INHC / INLC |
+| `GATE_EN` | PC4 | GPIO out | ENABLE |
+| `DRV_nFAULT` | PB12 | TIM1_BKIN (active low) | nFAULT (2 kΩ pull-up). A driver fault shuts the PWM off in hardware |
+| `DRV_SCLK` / `DRV_SDO` / `DRV_SDI` | PE12 / PE13 / PE14 | SPI4 SCK / MISO / MOSI (16-bit, CPHA = 1) | SCLK / SDO / SDI |
+| `DRV_nCS` | PD10 | GPIO out | nSCS. **PD10 has no label in the .ioc; confirm it is the DRV chip select** |
+| `CURR_A` / `CURR_B` / `CURR_C` | PA0 / PC3 / PE9 | ADC1_IN1 / ADC2_IN9 / ADC3_IN2 | SOA / SOB / SOC through the 22 Ω + 1 nF filter |
+
+Inside the gate driver and current-sense sheets the moteus net names remain (`CUR1` = SOC, `CUR3` = SOA). On the root sheet they are mapped so `CURR_A` really is phase A.
+
+Pins assigned but **not yet connected to a circuit** (ERC reports them as single-pin labels): `VPH_A/B/C`, `VBUS`, `TEMP_FET_HS`, `TEMP_FET_LS`, `TEMP_MOTOR` (sensing circuits still under discussion), and the teammates' `SPI1-3` + `ENC1-3_CS` (encoders), `CAN_TX/RX/STB`, `SWDIO/SWCLK`, `NRST`, `BOOT0`, `OSC_IN/OUT`.
+
+**Still needed on the MCU sheet (MCU owner):** decoupling capacitors, VDDA filtering, HSE crystal/oscillator, NRST capacitor and SWD header, BOOT0 pull-down. Power pins are connected to the global `+3V` and `GND` nets.
+
+Nets on the root sheet: `GHx`, `SHx` (= phase output), `GLx`, `SPx`, `SNx` for x = A/B/C link the driver and the bridges. The global supplies `+12V`, `+3V`, `GND` have no source until the logic-power sheet is added. Bus nets are the global labels `V+` and `GNDPWR`.
 
 Deliberately not changed yet: the 0.5 mΩ shunt (still TBD, see Sensing), and no gate resistors or gate pull-downs (moteus has none; see Layout rules).
 
