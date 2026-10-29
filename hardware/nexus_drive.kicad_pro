@@ -629,7 +629,7 @@
         "uuid": "2d97709d-a8ce-4889-9b37-2fa808653238"
       }
     ],
-    "used_designators": "",
+    "used_designators": "J1,#PWR1",
     "variants": []
   },
   "sheets": [
@@ -668,6 +668,10 @@
     [
       "9ba37d26-0a46-4f02-871f-a84fa336c3c4",
       "Encoders"
+    ],
+    [
+      "9aef1f14-2bb8-4ccd-9b80-556ee8898352",
+      "Sensing"
     ]
   ],
   "text_variables": {},

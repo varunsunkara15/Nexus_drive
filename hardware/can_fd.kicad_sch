@@ -2507,7 +2507,7 @@
 			)
 		)
 		(property "Value" "EMI_Filter_CommonMode"
-			(at 127 106.68 0)
+			(at 132.588 105.156 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3016,7 +3016,7 @@
 		(dnp no)
 		(uuid "cb74f344-859c-41f6-b73f-13867bbb6343")
 		(property "Reference" "U?"
-			(at 116.84 106.68 0)
+			(at 109.474 108.204 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3027,7 +3027,7 @@
 			)
 		)
 		(property "Value" "TCAN1042GV"
-			(at 116.84 109.22 0)
+			(at 109.474 110.744 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
