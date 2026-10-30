@@ -50,7 +50,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -72,6 +72,16 @@
 					)
 				)
 			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(property "ki_keywords" "connector"
 				(at 0 0 0)
 				(show_name no)
@@ -83,7 +93,18 @@
 					)
 				)
 			)
-			(symbol "Conn_01x05_Pin_0_1"
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x05_Pin_1_1"
 				(rectangle
 					(start 0.8636 5.207)
 					(end 0 4.953)
@@ -199,8 +220,6 @@
 						(type none)
 					)
 				)
-			)
-			(symbol "Conn_01x05_Pin_1_1"
 				(pin passive line
 					(at 5.08 5.08 180)
 					(length 3.81)
@@ -527,7 +546,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -539,7 +558,7 @@
 				)
 			)
 			(property "Description" "Unpolarized capacitor, small symbol"
-				(at 0 0 0)
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -601,7 +620,7 @@
 				(pin passive line
 					(at 0 2.54 270)
 					(length 2.032)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -619,7 +638,7 @@
 				(pin passive line
 					(at 0 -2.54 90)
 					(length 2.032)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -642,7 +661,7 @@
 				(hide yes)
 			)
 			(pin_names
-				(offset 0.254)
+				(offset 1.016)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -681,7 +700,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -807,8 +826,7 @@
 				(hide yes)
 			)
 			(pin_names
-				(offset 0.254)
-				(hide yes)
+				(offset 0)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -816,7 +834,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "FB"
-				(at 1.016 0.762 0)
+				(at 1.905 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -827,7 +845,7 @@
 				)
 			)
 			(property "Value" "FerriteBead_Small"
-				(at 1.016 -1.016 0)
+				(at 1.905 -1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -838,7 +856,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at -1.778 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -848,7 +866,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -893,11 +911,12 @@
 				)
 			)
 			(symbol "FerriteBead_Small_0_1"
-				(rectangle
-					(start -0.762 1.778)
-					(end 0.762 -1.778)
+				(polyline
+					(pts
+						(xy -1.8288 0.2794) (xy -1.1176 1.4986) (xy 1.8288 -0.2032) (xy 1.1176 -1.4224) (xy -1.8288 0.2794)
+					)
 					(stroke
-						(width 0.2032)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -906,10 +925,22 @@
 				)
 				(polyline
 					(pts
-						(xy -0.762 -1.016) (xy 0.762 1.016)
+						(xy 0 0.889) (xy 0 1.2954)
 					)
 					(stroke
-						(width 0.2032)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 -0.7874)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -920,8 +951,8 @@
 			(symbol "FerriteBead_Small_1_1"
 				(pin passive line
 					(at 0 2.54 270)
-					(length 0.762)
-					(name "~"
+					(length 1.27)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -938,8 +969,8 @@
 				)
 				(pin passive line
 					(at 0 -2.54 90)
-					(length 0.762)
-					(name "~"
+					(length 1.27)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -971,25 +1002,23 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 1.016 0.762 0)
+				(at 0 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.016 1.016)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "R_Small"
-				(at 1.016 -1.016 0)
+				(at 1.778 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -1003,7 +1032,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1064,7 +1093,7 @@
 				(pin passive line
 					(at 0 2.54 270)
 					(length 0.762)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1082,7 +1111,7 @@
 				(pin passive line
 					(at 0 -2.54 90)
 					(length 0.762)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1105,7 +1134,7 @@
 				(hide yes)
 			)
 			(pin_names
-				(offset 0.254)
+				(offset 0)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -1124,7 +1153,7 @@
 				)
 			)
 			(property "Value" "SolderJumper_2_Open"
-				(at 0 -2.032 0)
+				(at 0 -2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1144,8 +1173,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1156,7 +1185,7 @@
 				)
 			)
 			(property "Description" "Solder Jumper, 2-pole, open"
-				(at 0 0 0)
+				(at 0 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1177,7 +1206,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SolderJumper*"
+			(property "ki_fp_filters" "SolderJumper*Open*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1194,7 +1223,7 @@
 						(xy -0.254 1.016) (xy -0.254 -1.016)
 					)
 					(stroke
-						(width 0)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
@@ -1203,10 +1232,22 @@
 				)
 				(arc
 					(start -0.254 -1.016)
-					(mid -1.27 0)
+					(mid -1.2656 0)
 					(end -0.254 1.016)
 					(stroke
-						(width 0)
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0.1524)
 						(type default)
 					)
 					(fill
@@ -1218,30 +1259,18 @@
 						(xy 0.254 1.016) (xy 0.254 -1.016)
 					)
 					(stroke
-						(width 0)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(arc
-					(start 0.254 1.016)
-					(mid 1.27 0)
-					(end 0.254 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 			)
 			(symbol "SolderJumper_2_Open_1_1"
 				(pin passive line
-					(at -2.54 0 0)
-					(length 1.27)
+					(at -5.08 0 0)
+					(length 3.81)
 					(name "A"
 						(effects
 							(font
@@ -1258,8 +1287,8 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 0 180)
-					(length 1.27)
+					(at 5.08 0 180)
+					(length 3.81)
 					(name "B"
 						(effects
 							(font
@@ -3854,10 +3883,6 @@
 		(uuid "3ea90226-8573-4d40-8e99-14ea5125d165")
 	)
 	(no_connect
-		(at 182.88 154.94)
-		(uuid "4a8e9fc9-b0d6-4ed5-8a1f-64af374df301")
-	)
-	(no_connect
 		(at 223.52 154.94)
 		(uuid "4b24e262-0b1c-4c66-bc26-2bc98e5251dc")
 	)
@@ -4011,7 +4036,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 142.24) (xy 134.62 142.24)
+			(xy 132.08 142.24) (xy 134.62 142.24)
 		)
 		(stroke
 			(width 0)
@@ -4271,7 +4296,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 142.24) (xy 119.38 142.24)
+			(xy 121.92 142.24) (xy 119.38 142.24)
 		)
 		(stroke
 			(width 0)
@@ -4919,6 +4944,16 @@
 		)
 		(uuid "ffc4443d-8889-496c-a401-3d86ad8bd472")
 	)
+	(label "OSC_OUT"
+		(at 177.8 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "07223c4e-8330-41c3-83af-90f47ea0a64d")
+	)
 	(label "SWDIO"
 		(at 86.36 124.46 0)
 		(effects
@@ -4928,6 +4963,26 @@
 			(justify left bottom)
 		)
 		(uuid "0e1ba2b6-00b8-45d2-a2d0-b29a9e6cd111")
+	)
+	(label "USART3_RX"
+		(at 177.8 127 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1c1b902e-26da-49d6-a567-521ec5b5156a")
+	)
+	(label "SWDIO"
+		(at 228.6 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "29167a9f-8107-483c-9c61-1b36d159cdf5")
 	)
 	(label "OSC_OUT"
 		(at 111.76 165.1 0)
@@ -4989,6 +5044,16 @@
 		)
 		(uuid "782045d1-1456-400a-8be1-33c7def0b586")
 	)
+	(label "USART3_TX"
+		(at 228.6 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "82810eed-27f1-4e65-8809-19401cf8d81e")
+	)
 	(label "NRST"
 		(at 86.36 129.54 0)
 		(effects
@@ -4998,6 +5063,16 @@
 			(justify left bottom)
 		)
 		(uuid "8b9c2cd5-7fc1-4d9c-8891-824ce855e018")
+	)
+	(label "NRST"
+		(at 177.8 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "af209123-2b86-435a-a800-d425dd1e416b")
 	)
 	(label "BOOT0"
 		(at 101.6 137.16 90)
@@ -5009,6 +5084,16 @@
 		)
 		(uuid "c1f766a0-e285-4f6e-bb33-4a3df9e5674d")
 	)
+	(label "SWCLK"
+		(at 228.6 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1aac105-b0a1-41bb-ace7-1a25c8e37a65")
+	)
 	(label "NRST"
 		(at 101.6 96.52 90)
 		(effects
@@ -5018,6 +5103,26 @@
 			(justify left bottom)
 		)
 		(uuid "d289411f-3fd8-45c8-967e-724d057c4892")
+	)
+	(label "OSC_IN"
+		(at 177.8 99.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ded3fa03-b263-42a7-8f26-8f4a6df168cb")
+	)
+	(label "BOOT0"
+		(at 228.6 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e6f8447a-1a64-45b5-95f7-ca15eb78b118")
 	)
 	(global_label "GND"
 		(shape passive)
@@ -5438,17 +5543,6 @@
 		)
 		(uuid "065f6f2e-30d1-4e77-81fc-cccb54596a59")
 	)
-	(hierarchical_label "OSC_OUT"
-		(shape bidirectional)
-		(at 177.8 101.6 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "07223c4e-8330-41c3-83af-90f47ea0a64d")
-	)
 	(hierarchical_label "SPI3_SCK"
 		(shape bidirectional)
 		(at 177.8 175.26 180)
@@ -5460,17 +5554,6 @@
 		)
 		(uuid "10d51bd5-0ec9-41df-8f31-e25fc1001462")
 	)
-	(hierarchical_label "USART3_RX"
-		(shape bidirectional)
-		(at 177.8 127 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1c1b902e-26da-49d6-a567-521ec5b5156a")
-	)
 	(hierarchical_label "DRV_nCS"
 		(shape bidirectional)
 		(at 177.8 144.78 180)
@@ -5481,17 +5564,6 @@
 			(justify right)
 		)
 		(uuid "24f5078d-de2f-4196-8e60-0a68191e7216")
-	)
-	(hierarchical_label "SWDIO"
-		(shape bidirectional)
-		(at 228.6 121.92 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "29167a9f-8107-483c-9c61-1b36d159cdf5")
 	)
 	(hierarchical_label "PWM_BL"
 		(shape bidirectional)
@@ -5625,17 +5697,6 @@
 		)
 		(uuid "7a8312a0-a067-4f73-b872-1e9f8282fb8f")
 	)
-	(hierarchical_label "USART3_TX"
-		(shape bidirectional)
-		(at 228.6 157.48 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "82810eed-27f1-4e65-8809-19401cf8d81e")
-	)
 	(hierarchical_label "TEMP_FET_LS"
 		(shape bidirectional)
 		(at 177.8 139.7 180)
@@ -5768,17 +5829,6 @@
 		)
 		(uuid "ae9ddbf2-4f3e-426e-a33e-b2b8e397d9df")
 	)
-	(hierarchical_label "NRST"
-		(shape bidirectional)
-		(at 177.8 93.98 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "af209123-2b86-435a-a800-d425dd1e416b")
-	)
 	(hierarchical_label "SPI1_SCK"
 		(shape bidirectional)
 		(at 228.6 139.7 0)
@@ -5834,17 +5884,6 @@
 		)
 		(uuid "ce1e2430-5fec-461a-bdb6-7cca5e7bbedd")
 	)
-	(hierarchical_label "SWCLK"
-		(shape bidirectional)
-		(at 228.6 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d1aac105-b0a1-41bb-ace7-1a25c8e37a65")
-	)
 	(hierarchical_label "SPI2_MISO"
 		(shape bidirectional)
 		(at 228.6 167.64 0)
@@ -5856,17 +5895,6 @@
 		)
 		(uuid "d2fd28bd-3989-44d3-ba87-9319baad3666")
 	)
-	(hierarchical_label "OSC_IN"
-		(shape bidirectional)
-		(at 177.8 99.06 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ded3fa03-b263-42a7-8f26-8f4a6df168cb")
-	)
 	(hierarchical_label "CAN_TX"
 		(shape bidirectional)
 		(at 228.6 119.38 0)
@@ -5877,17 +5905,6 @@
 			(justify left)
 		)
 		(uuid "e1e9f205-a89b-4caa-bf90-af2748ff3833")
-	)
-	(hierarchical_label "BOOT0"
-		(shape bidirectional)
-		(at 228.6 152.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e6f8447a-1a64-45b5-95f7-ca15eb78b118")
 	)
 	(hierarchical_label "SPI1_MOSI"
 		(shape bidirectional)
@@ -5933,7 +5950,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0f1e4922-1504-40ba-ba1b-60b232c460fc")
-		(property "Reference" "C?"
+		(property "Reference" "C3"
 			(at 108.458 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5979,7 +5996,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 106.68 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -6012,7 +6029,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -6029,7 +6046,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "16dea1d6-234d-4c71-961e-e1f2a5a60216")
-		(property "Reference" "C?"
+		(property "Reference" "C10"
 			(at 230.378 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6075,7 +6092,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 228.6 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6096,7 +6113,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -6113,7 +6130,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "306f8419-4b88-4faa-9817-0c28b987b32d")
-		(property "Reference" "C?"
+		(property "Reference" "C8"
 			(at 210.058 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6159,7 +6176,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 208.28 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6180,7 +6197,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -6197,7 +6214,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3b6d9df0-ad5c-4f7a-b543-e887dc56b766")
-		(property "Reference" "FB?"
+		(property "Reference" "FB1"
 			(at 219.202 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6243,7 +6260,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Ferrite bead, small symbol"
 			(at 220.98 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -6264,7 +6281,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "FB?")
+					(reference "FB1")
 					(unit 1)
 				)
 			)
@@ -6444,7 +6461,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "66c8d3f4-712f-47e6-9b8d-93477a598efa")
-		(property "Reference" "C?"
+		(property "Reference" "C4"
 			(at 169.418 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6490,7 +6507,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 167.64 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6511,7 +6528,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -6528,7 +6545,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6c47faba-8ad5-4bc9-be0a-e85dc72f0fdc")
-		(property "Reference" "C?"
+		(property "Reference" "C5"
 			(at 179.578 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6574,7 +6591,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 177.8 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6595,7 +6612,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -6612,7 +6629,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6c69f91f-b989-49d5-b56a-92c15bcf4cf1")
-		(property "Reference" "C?"
+		(property "Reference" "C7"
 			(at 199.898 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6658,7 +6675,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 198.12 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6679,7 +6696,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -6696,7 +6713,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6d2c62eb-547e-4b4b-9bfb-edf5e7560bfd")
-		(property "Reference" "C?"
+		(property "Reference" "C9"
 			(at 220.218 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6742,7 +6759,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 218.44 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6763,7 +6780,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -6780,7 +6797,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "70baa26b-2359-4d26-a2b4-277148c1fec7")
-		(property "Reference" "C?"
+		(property "Reference" "C12"
 			(at 240.538 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6826,7 +6843,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 238.76 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -6847,7 +6864,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -6864,7 +6881,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "823716ba-6142-4909-bd92-1d37c4c6a12e")
-		(property "Reference" "JP?"
+		(property "Reference" "JP1"
 			(at 127 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6908,7 +6925,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Solder Jumper, 2-pole, open"
 			(at 127 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -6929,7 +6946,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "JP?")
+					(reference "JP1")
 					(unit 1)
 				)
 			)
@@ -6946,7 +6963,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8501af5d-d534-411b-9a22-2ac73a932c91")
-		(property "Reference" "C?"
+		(property "Reference" "C13"
 			(at 243.078 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6992,7 +7009,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 241.3 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -7013,7 +7030,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -7030,7 +7047,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "970d672c-909e-4934-b7f7-c8d4dd0a2aeb")
-		(property "Reference" "J?"
+		(property "Reference" "J2"
 			(at 76.2 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7074,7 +7091,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x05, script generated"
 			(at 76.2 127 0)
 			(hide yes)
 			(show_name no)
@@ -7104,7 +7121,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "J?")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -7121,7 +7138,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a9104e46-c439-44d4-a578-82ef750590cf")
-		(property "Reference" "C?"
+		(property "Reference" "C11"
 			(at 235.458 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7167,7 +7184,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 233.68 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -7188,7 +7205,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -7249,7 +7266,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Two pin crystal, small symbol"
 			(at 101.6 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -7299,7 +7316,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cdaba8e1-4747-4d74-8341-704532f4fb7a")
-		(property "Reference" "C?"
+		(property "Reference" "C1"
 			(at 94.742 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7345,7 +7362,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 96.52 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -7378,7 +7395,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -7429,7 +7446,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.st.com/resource/en/datasheet/stm32g474mb.pdf"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/stm32g474me.pdf"
 			(at 203.2 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -7441,7 +7458,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" "STMicroelectronics Arm Cortex-M4 MCU, 128-512KB flash, 128KB RAM, 170 MHz, 1.71-3.6V, 66 GPIO, LQFP80"
+		(property "Description" "STMicroelectronics Arm Cortex-M4 MCU, 512KB flash, 128KB RAM, 170 MHz, 1.71-3.6V, 66 GPIO, LQFP80"
 			(at 203.2 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -7713,7 +7730,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dac59aa1-5154-40d9-8c7a-b8310861d978")
-		(property "Reference" "C?"
+		(property "Reference" "C6"
 			(at 189.738 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7759,7 +7776,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 187.96 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -7780,7 +7797,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -7797,7 +7814,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e1275fdf-e6df-4c5a-9b94-986d3f5c4d51")
-		(property "Reference" "R?"
+		(property "Reference" "R1"
 			(at 103.378 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7843,7 +7860,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 101.6 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -7864,7 +7881,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "R?")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -7881,7 +7898,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e1815375-bd68-475c-b56f-ddd743306f81")
-		(property "Reference" "C?"
+		(property "Reference" "C2"
 			(at 103.378 100.33 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7927,7 +7944,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 101.6 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -7948,7 +7965,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/5f0c7e2a-3b1d-4c8e-9a6f-2d4b8e1c7a90"
-					(reference "C?")
+					(reference "C2")
 					(unit 1)
 				)
 			)

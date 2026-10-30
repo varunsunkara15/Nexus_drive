@@ -1,0 +1,35 @@
+[nexus_drive.kicad_sch]
+  removed 8 dangling local labels + stub wires + MCU sheet pins: SWDIO, SWCLK, NRST, BOOT0, OSC_IN, OSC_OUT, USART3_TX, USART3_RX
+  added PWR_FLAG #FLG01-06 on +12V, +5V, +3V, +3VA, GND, GNDPWR (bottom-left of root sheet) + explanatory note
+[stm32g474.kicad_sch]
+  converted hierarchical labels -> local labels (same name/position, still join J2/Y1/J1/R1/C2): SWDIO, SWCLK, NRST, BOOT0, OSC_IN, OSC_OUT, USART3_TX, USART3_RX
+  JP1 (BOOT0 jumper): wires now end on pins A (4800,5600) and B (5200,5600) instead of running through them
+  removed No-Connect flag on U1 PC2 (pin is used: VPH_C ADC input)
+[can_fd.kicad_sch]
+  D1 NUP2105L: wired K1->CANH, K2->CANL (labels moved onto short stubs above the pins), A->GND label (was floating 100 mil below)
+  JP2 termination jumper: removed dangling stub (R3.2 and JP2.A already meet pin-to-pin); CANL stub/label moved so wire ends on JP2.B
+[encoders.kicad_sch]
+  U3/U4 USBLC6-4SC6: I/O1-4 stubs+labels moved down 50 mil and extended to the pins; VBUS stubs extended to the VBUS pins
+[gate_driver.kicad_sch]
+  moved C19 by (0,25) mil
+  moteus:DRV8353SRTAR pin CPH: unspecified -> passive
+  moteus:DRV8353SRTAR pin CPL: unspecified -> passive
+  moteus:DRV8353SRTAR pin SDO: unspecified -> open_collector
+  moteus:DRV8353SRTAR pin VCP: power_in -> power_out
+  moteus:DRV8353SRTAR pin DVDD: power_in -> power_out
+  moteus:DRV8353SRTAR pin VGLS: power_in -> power_out
+  U5 footprint: "RTA0040B" -> "moteus:RTA0040B"
+[h_bridge.kicad_sch]
+  moved X1 by (25,0) mil
+  moved C24 by (0,25) mil
+  moved Q1 by (0,25) mil
+  moved D4 by (25,25) mil
+  moved Q2 by (0,25) mil
+  moteus:BAT41KFILM pin #1: unspecified -> passive
+  moteus:BAT41KFILM pin #1: unspecified -> passive
+  moteus:BAT41KFILM pin #2: unspecified -> passive
+  moteus:BAT41KFILM pin #2: unspecified -> passive
+  removed duplicate local labels SXX_P, SXX_N, OUTX (nets keep hierarchical names SPX/SNX/SHX)
+  D4 footprint: "SOD-523_STM" -> "moteus:SOD-523_STM"
+[can_fd.kicad_sch / encoders.kicad_sch]
+  U2 TCAN1042GV, FL1 EMI_Filter_CommonMode, U6 MA702GQ re-pointed to new project library nexus_drive.kicad_sym (nickname nexus_drive)

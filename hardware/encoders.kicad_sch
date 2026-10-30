@@ -46,7 +46,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -57,11 +57,21 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x06"
+			(property "Description" "Generic connector, single row, 01x06, script generated"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -79,7 +89,18 @@
 					)
 				)
 			)
-			(symbol "Conn_01x06_Pin_0_1"
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x06_Pin_1_1"
 				(rectangle
 					(start 0.8636 5.207)
 					(end 0 4.953)
@@ -218,8 +239,6 @@
 						(type none)
 					)
 				)
-			)
-			(symbol "Conn_01x06_Pin_1_1"
 				(pin passive line
 					(at 5.08 5.08 180)
 					(length 3.81)
@@ -377,7 +396,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -389,7 +408,7 @@
 				)
 			)
 			(property "Description" "Unpolarized capacitor, small symbol"
-				(at 0 0 0)
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -451,7 +470,7 @@
 				(pin passive line
 					(at 0 2.54 270)
 					(length 2.032)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -469,7 +488,7 @@
 				(pin passive line
 					(at 0 -2.54 90)
 					(length 2.032)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -501,25 +520,23 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 1.016 0.762 0)
+				(at 0 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.016 1.016)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "R_Small"
-				(at 1.016 -1.016 0)
+				(at 1.778 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -533,7 +550,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -594,7 +611,7 @@
 				(pin passive line
 					(at 0 2.54 270)
 					(length 0.762)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -612,7 +629,7 @@
 				(pin passive line
 					(at 0 -2.54 90)
 					(length 0.762)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -632,7 +649,7 @@
 		)
 		(symbol "Power_Protection:USBLC6-4SC6"
 			(pin_names
-				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -640,26 +657,53 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at 0 12.7 0)
+				(at 1.27 9.525 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Value" "USBLC6-4SC6"
-				(at 0 -12.7 0)
+				(at 1.27 6.985 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+				(at 2.54 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-4.pdf"
+				(at 2.54 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "Very low capacitance ESD protection diode, 4 data-line, SOT-23-6"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -670,29 +714,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Very low capacitance ESD protection, 4 lines, SOT-23-6"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "usb esd protection tvs"
+			(property "ki_keywords" "usb ethernet sim card video"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -714,10 +736,446 @@
 					)
 				)
 			)
+			(symbol "USBLC6-4SC6_0_0"
+				(circle
+					(center -3.556 2.54)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -1.778 4.572)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -1.778 0)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -1.778 -7.112)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -0.508 4.572)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -0.508 -7.112)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -2.54)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0.508 4.572)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0.508 -7.112)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.778 4.572)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.778 -5.08)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.778 -7.112)
+					(radius 0.0001)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
 			(symbol "USBLC6-4SC6_0_1"
+				(polyline
+					(pts
+						(xy -5.08 2.54) (xy -3.556 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 0) (xy -1.778 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -5.08) (xy 1.778 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.064 3.048) (xy -3.048 3.048) (xy -3.556 4.064) (xy -4.064 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.064 -5.588) (xy -3.048 -5.588)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 4.064) (xy -4.064 4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -6.604) (xy -4.064 -6.604) (xy -3.556 -5.588) (xy -3.048 -6.604)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 4.064) (xy -1.27 4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.286 -5.588) (xy -1.27 -5.588)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 3.048) (xy -2.286 3.048) (xy -1.778 4.064) (xy -1.27 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -6.604) (xy -2.286 -6.604) (xy -1.778 -5.588) (xy -1.27 -6.604)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 3.048) (xy 0.508 3.048) (xy 0 4.064) (xy -0.508 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -5.588) (xy 0.508 -5.588)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -6.604) (xy 0.508 -6.604) (xy 0 -5.588) (xy -0.508 -6.604)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 5.08) (xy 0.508 4.572)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 4.064) (xy -0.508 4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -7.112) (xy -0.508 -7.112)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 4.064) (xy 2.286 4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -6.604) (xy 2.286 -6.604) (xy 1.778 -5.588) (xy 1.27 -6.604)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.778 4.572) (xy 3.302 4.572) (xy 3.302 -7.112) (xy 1.778 -7.112)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 3.048) (xy 1.27 3.048) (xy 1.778 4.064) (xy 2.286 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -5.588) (xy 1.27 -5.588)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 -0.762) (xy 2.794 -0.381) (xy 3.81 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -1.524) (xy 2.794 -1.524) (xy 3.302 -0.508) (xy 3.81 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "USBLC6-4SC6_1_1"
 				(rectangle
-					(start -7.62 -7.62)
-					(end 7.62 7.62)
+					(start -5.08 5.334)
+					(end 5.08 -7.874)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -726,10 +1184,56 @@
 						(type background)
 					)
 				)
-			)
-			(symbol "USBLC6-4SC6_1_1"
+				(polyline
+					(pts
+						(xy -1.778 4.572) (xy -3.556 4.572) (xy -3.556 -7.112) (xy -1.778 -7.112)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 4.572) (xy 1.778 4.572) (xy 1.778 -7.112) (xy 0.508 -7.112)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -7.62) (xy -0.508 -7.112) (xy -1.778 -7.112) (xy -1.778 4.572) (xy -0.508 4.572)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.508 -7.112) (xy 0 -6.604) (xy 0 4.064) (xy -0.508 4.572)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin passive line
-					(at -10.16 3.81 0)
+					(at -7.62 2.54 0)
 					(length 2.54)
 					(name "I/O1"
 						(effects
@@ -746,7 +1250,7 @@
 						)
 					)
 				)
-				(pin power_in line
+				(pin passive line
 					(at 0 -10.16 90)
 					(length 2.54)
 					(name "GND"
@@ -765,7 +1269,7 @@
 					)
 				)
 				(pin passive line
-					(at -10.16 1.27 0)
+					(at -7.62 0 0)
 					(length 2.54)
 					(name "I/O2"
 						(effects
@@ -783,7 +1287,7 @@
 					)
 				)
 				(pin passive line
-					(at -10.16 -1.27 0)
+					(at -7.62 -2.54 0)
 					(length 2.54)
 					(name "I/O3"
 						(effects
@@ -800,8 +1304,8 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 10.16 270)
+				(pin passive line
+					(at 0 7.62 270)
 					(length 2.54)
 					(name "VBUS"
 						(effects
@@ -819,7 +1323,7 @@
 					)
 				)
 				(pin passive line
-					(at -10.16 -3.81 0)
+					(at -7.62 -5.08 0)
 					(length 2.54)
 					(name "I/O4"
 						(effects
@@ -839,7 +1343,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Sensor_Magnetic:MA702GQ"
+		(symbol "nexus_drive:MA702GQ"
 			(pin_names
 				(offset 1.016)
 			)
@@ -1394,7 +1898,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 170.18) (xy 99.06 170.18)
+			(xy 99.06 171.45) (xy 104.14 171.45)
 		)
 		(stroke
 			(width 0)
@@ -1424,7 +1928,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 114.3) (xy 99.06 114.3)
+			(xy 99.06 115.57) (xy 104.14 115.57)
 		)
 		(stroke
 			(width 0)
@@ -1494,7 +1998,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 105.41) (xy 111.76 102.87)
+			(xy 111.76 107.95) (xy 111.76 102.87)
 		)
 		(stroke
 			(width 0)
@@ -1634,7 +2138,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 175.26) (xy 99.06 175.26)
+			(xy 99.06 176.53) (xy 104.14 176.53)
 		)
 		(stroke
 			(width 0)
@@ -1644,7 +2148,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 111.76) (xy 99.06 111.76)
+			(xy 99.06 113.03) (xy 104.14 113.03)
 		)
 		(stroke
 			(width 0)
@@ -1724,7 +2228,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 119.38) (xy 99.06 119.38)
+			(xy 99.06 120.65) (xy 104.14 120.65)
 		)
 		(stroke
 			(width 0)
@@ -1754,7 +2258,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 167.64) (xy 99.06 167.64)
+			(xy 99.06 168.91) (xy 104.14 168.91)
 		)
 		(stroke
 			(width 0)
@@ -1804,7 +2308,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 172.72) (xy 99.06 172.72)
+			(xy 99.06 173.99) (xy 104.14 173.99)
 		)
 		(stroke
 			(width 0)
@@ -1814,7 +2318,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 116.84) (xy 99.06 116.84)
+			(xy 99.06 118.11) (xy 104.14 118.11)
 		)
 		(stroke
 			(width 0)
@@ -1854,7 +2358,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 161.29) (xy 111.76 158.75)
+			(xy 111.76 163.83) (xy 111.76 158.75)
 		)
 		(stroke
 			(width 0)
@@ -1893,7 +2397,7 @@
 		(uuid "08a96186-cd8b-4503-b78b-56206376395e")
 	)
 	(label "P1_CS"
-		(at 99.06 119.38 180)
+		(at 99.06 120.65 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1903,7 +2407,7 @@
 		(uuid "1d36760a-040c-4dee-9814-c02d33deaba2")
 	)
 	(label "P2_CS"
-		(at 99.06 175.26 180)
+		(at 99.06 176.53 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1923,7 +2427,7 @@
 		(uuid "29c55c4d-74f4-41ef-a68c-da60318e2de3")
 	)
 	(label "P2_MOSI"
-		(at 99.06 172.72 180)
+		(at 99.06 173.99 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1983,7 +2487,7 @@
 		(uuid "6b520627-8842-4953-929b-eee199891624")
 	)
 	(label "P2_SCK"
-		(at 99.06 167.64 180)
+		(at 99.06 168.91 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2003,7 +2507,7 @@
 		(uuid "814e3235-e445-4899-a820-3077e617bb5b")
 	)
 	(label "P1_SCK"
-		(at 99.06 111.76 180)
+		(at 99.06 113.03 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2033,7 +2537,7 @@
 		(uuid "8c954c7b-fea7-47e2-8cc4-021a4bef7286")
 	)
 	(label "P1_MOSI"
-		(at 99.06 116.84 180)
+		(at 99.06 118.11 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2073,7 +2577,7 @@
 		(uuid "b5a55b18-2146-4d68-bb38-2d5adcd62b76")
 	)
 	(label "P1_MISO"
-		(at 99.06 114.3 180)
+		(at 99.06 115.57 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2093,7 +2597,7 @@
 		(uuid "c7e64b82-034b-45fe-861a-63f99f5559ae")
 	)
 	(label "P2_MISO"
-		(at 99.06 170.18 180)
+		(at 99.06 171.45 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2553,7 +3057,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "029e6157-948a-4588-a76a-046f75401d1e")
-		(property "Reference" "R?"
+		(property "Reference" "R20"
 			(at 60.96 158.02 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2597,7 +3101,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -2618,7 +3122,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -2635,7 +3139,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "04dd0d40-5fb1-41b2-bbef-2024bf8640de")
-		(property "Reference" "C?"
+		(property "Reference" "C30"
 			(at 141.478 34.29 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2681,7 +3185,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 139.7 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -2702,7 +3206,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "C?")
+					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -2719,7 +3223,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "06adad63-bef2-4e22-b891-f2be6b64043e")
-		(property "Reference" "R?"
+		(property "Reference" "R7"
 			(at 60.96 65.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2763,7 +3267,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -2784,7 +3288,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -2801,7 +3305,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1531b821-dcc9-413f-962e-760fc3b1be76")
-		(property "Reference" "U?"
+		(property "Reference" "U4"
 			(at 121.92 170.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2823,7 +3327,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
 			(at 111.76 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -2835,7 +3339,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-4.pdf"
 			(at 111.76 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -2847,7 +3351,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Very low capacitance ESD protection diode, 4 data-line, SOT-23-6"
 			(at 111.76 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -2880,7 +3384,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "U?")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -2897,7 +3401,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4be87d1e-d7f0-46af-b8cf-c8c0fa04d1ff")
-		(property "Reference" "R?"
+		(property "Reference" "R5"
 			(at 60.96 50.07 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2941,7 +3445,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -2962,7 +3466,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -2979,7 +3483,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4f44ae8c-ec6c-499f-a56c-99d7cb587ec9")
-		(property "Reference" "R?"
+		(property "Reference" "R22"
 			(at 60.96 173.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3023,7 +3527,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -3044,7 +3548,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -3061,7 +3565,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "57f25100-9a64-47dd-806c-667c4360c9ec")
-		(property "Reference" "R?"
+		(property "Reference" "R11"
 			(at 60.96 125 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3105,7 +3609,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 127 0)
 			(hide yes)
 			(show_name no)
@@ -3126,7 +3630,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -3143,7 +3647,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7a1f3b33-d7aa-4ce5-9ed9-9963624196d7")
-		(property "Reference" "R?"
+		(property "Reference" "R10"
 			(at 60.96 117.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3187,7 +3691,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -3208,7 +3712,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -3225,7 +3729,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8d96a5c4-5d9c-4653-b495-56c6c528ec02")
-		(property "Reference" "C?"
+		(property "Reference" "C17"
 			(at 133.858 34.29 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3271,7 +3775,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 132.08 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -3292,7 +3796,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "C?")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -3309,7 +3813,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ac8901b2-3812-41ff-8b36-5c874d81f33a")
-		(property "Reference" "J?"
+		(property "Reference" "J6"
 			(at 170.18 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3353,7 +3857,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x06, script generated"
 			(at 170.18 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -3386,7 +3890,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "J?")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -3403,7 +3907,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ad5cf88e-c3f5-4c39-b4a2-f1a7c3803f8b")
-		(property "Reference" "U?"
+		(property "Reference" "U3"
 			(at 121.92 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3425,7 +3929,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
 			(at 111.76 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -3437,7 +3941,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/usblc6-4.pdf"
 			(at 111.76 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -3449,7 +3953,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Very low capacitance ESD protection diode, 4 data-line, SOT-23-6"
 			(at 111.76 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -3482,7 +3986,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "U?")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -3499,7 +4003,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b2ef89a2-a9ac-4664-a2e9-2f0e13428d1c")
-		(property "Reference" "R?"
+		(property "Reference" "R4"
 			(at 60.96 42.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3543,7 +4047,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -3564,7 +4068,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -3581,7 +4085,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b57e0e10-f4fd-4449-a1e1-8d7d3801c2c1")
-		(property "Reference" "J?"
+		(property "Reference" "J5"
 			(at 156.21 158.75 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3625,7 +4129,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x06, script generated"
 			(at 156.21 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -3658,14 +4162,14 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "J?")
+					(reference "J5")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Sensor_Magnetic:MA702GQ")
+		(lib_id "nexus_drive:MA702GQ")
 		(at 116.84 55.88 0)
 		(unit 1)
 		(body_style 1)
@@ -3675,7 +4179,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c3f0a577-f299-48d7-821e-3f152a52e46d")
-		(property "Reference" "U?"
+		(property "Reference" "U6"
 			(at 127 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3787,7 +4291,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "U?")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -3804,7 +4308,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c977c573-6fb6-4efe-9f22-caf53d308f36")
-		(property "Reference" "R?"
+		(property "Reference" "R8"
 			(at 60.96 102.14 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3848,7 +4352,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -3869,7 +4373,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -3886,7 +4390,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d52bc2b8-f8c0-4db6-85ee-95c7135da38e")
-		(property "Reference" "R?"
+		(property "Reference" "R6"
 			(at 60.96 57.69 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3930,7 +4434,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -3951,7 +4455,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -3968,7 +4472,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d5467ac2-d9fd-413c-9291-23c3242e8fcf")
-		(property "Reference" "R?"
+		(property "Reference" "R9"
 			(at 60.96 109.76 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4012,7 +4516,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -4033,7 +4537,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -4050,7 +4554,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "db8d235f-eaed-4bc0-b98f-2cdc680636fe")
-		(property "Reference" "R?"
+		(property "Reference" "R23"
 			(at 60.96 180.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4094,7 +4598,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -4115,7 +4619,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -4132,7 +4636,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dfcde504-6db9-4f5e-9150-0ed0f75e3859")
-		(property "Reference" "R?"
+		(property "Reference" "R21"
 			(at 60.96 165.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4176,7 +4680,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 60.96 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -4197,7 +4701,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9ba37d26-0a46-4f02-871f-a84fa336c3c4"
-					(reference "R?")
+					(reference "R21")
 					(unit 1)
 				)
 			)

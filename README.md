@@ -4,7 +4,7 @@
 
 The goal is a compact board that can sit near each joint actuator and drive its motor accurately and efficiently. It should also report back to the robot's main controller.
 
-> **Status:** 🚧 Early development. Schematic in progress (power stage, gate driver and MCU connections done); PCB layout not started.
+> **Status:** 🚧 Early development. Schematic in progress (power stage, gate driver, MCU, CAN-FD, encoders and sensing drawn; ERC has 0 errors; logic supplies, DC-link and input protection still to add); PCB layout not started.
 
 ---
 
@@ -19,7 +19,11 @@ Nexus_drive/
 │   ├── h_bridge.kicad_sch        One half-bridge (MOSFETs, shunt, phase output), used 3× for phases A/B/C
 │   ├── current_sense.kicad_sch   RC filters on the current-sense amplifier outputs
 │   ├── stm32g474.kicad_sch       STM32G474METx MCU, wired to the pin plan
-│   ├── nexus_drive.kicad_pcb     PCB layout
+│   ├── can_fd.kicad_sch          TCAN1042GV CAN-FD transceiver and bus connectors
+│   ├── encoders.kicad_sch        On-board MA702GQ encoder and external SPI encoder connectors
+│   ├── sensing.kicad_sch         Bus and phase voltage dividers, FET and motor temperature inputs
+│   ├── nexus_drive.kicad_sym     Project symbols (TCAN1042GV, MA702GQ, EMI filter)
+│   ├── nexus_drive.kicad_pcb     PCB layout (not started)
 │   ├── fp-lib-table, sym-lib-table   Project library tables
 │   └── lib/                      Project-local symbol and footprint libraries (moteus)
 ├── firmware/
@@ -54,8 +58,8 @@ These are the intended targets. Values still marked **TBD** will be filled in as
 | MOSFETs | 6 × onsemi FDMT80080DC (80 V, 1.35 mΩ) |
 | Current sensing | 3 low-side shunts (value TBD) |
 | Overvoltage protection | Input TVS, bulk capacitor, 100 V ceramic DC-link bank, anti-spark connector |
-| Encoder interface | TBD |
-| Communication | TBD |
+| Encoder interface | 3 × SPI: on-board MA702GQ magnetic encoder, 2 external connectors |
+| Communication | CAN-FD (TCAN1042GV), two daisy-chain connectors |
 | Board dimensions | TBD |
 
 ### Note: bulk capacitance on the battery bus
@@ -76,6 +80,8 @@ This review covers **only the sheets drawn so far** (gate driver, H-bridges, cur
 
 **Overall:** the power stage is a careful copy of a proven design and is mostly correct. There is one real wiring issue (R1), a few loose ends, and some decisions to settle for the over-spec use.
 
+**Update (30 Oct 2026):** the schematic cleanup in [hardware/CHANGES.txt](hardware/CHANGES.txt) brought ERC to 0 errors. R3, R11 and R13 are closed, and R14 and R17 are partly done. R1 and R2 are still open, and they do not show up in ERC.
+
 ### ✅ What's done well
 - Power stage copied from moteus x1 and checked pin for pin; Apache-2.0 attribution in NOTICE.md.
 - 6-PWM on TIM1 with **DRV8353 nFAULT on TIM1_BKIN**: a driver fault stops the PWM in hardware.
@@ -88,8 +94,8 @@ This review covers **only the sheets drawn so far** (gate driver, H-bridges, cur
 
 ### 🔴 Must fix
 - [ ] **R1: the VGLS capacitor (C23) returns to `GND` instead of `GNDPWR`.** VGLS supplies the low-side gate drive. Its charge flows through the low-side FET source, the shunt and PGND, so the capacitor must return to **PGND/GNDPWR right at the DRV8353 PGND pin**. On `GND`, the gate current crosses between the two grounds every PWM cycle.
-- [ ] **R2: `GND` and `GNDPWR` are not joined anywhere.** The DRV8353 needs AGND and PGND connected. Add **one net tie under the driver** (moteus has this on a sheet that was not copied).
-- [ ] **R3: the encoder sheet is not connected to the MCU.** SPI1–3 and ENC1–3_CS have no sheet pins on the root sheet (12 ERC errors).
+- [ ] **R2: `GND` and `GNDPWR` are not joined anywhere.** The DRV8353 needs AGND and PGND connected. Add **one net tie under the driver** (moteus has this on a sheet that was not copied). NT1 on the sensing sheet joins `GNDA` to `GND` only, so this is still open.
+- [x] **R3: the encoder sheet is not connected to the MCU.** SPI1–3 and ENC1–3_CS have no sheet pins on the root sheet (12 ERC errors). *Fixed: sheet pins added.*
 
 ### 🟠 Should fix
 - [ ] **R4: VM bulk capacitance.** VM (+12V) has only 0.1 µF (C19). Add the local bulk capacitor that the DRV8353 datasheet recommends for VM, next to the pin.
@@ -108,13 +114,13 @@ This review covers **only the sheets drawn so far** (gate driver, H-bridges, cur
 - [ ] **R10: thermal design for the over-spec rating.** The 120 A-class headroom only holds with matching copper and heatsinking: heavy copper for V+, phases and GNDPWR, a thermal path for the Dual Cool FETs, and shunts sized for the continuous current of the largest motor you plan to use.
 
 ### 🟡 Minor / housekeeping
-- [ ] **R11:** Annotate the 49 un-annotated parts (`C?`, `R?`, `U?` on the CAN, encoder and MCU sheets). Until then, the netlist merges parts with the same reference.
-- [ ] **R12:** Assign footprints to the parts on the CAN, encoder and MCU sheets (≈45 parts have none).
-- [ ] **R13:** Delete the 6 dangling root-sheet labels (`SWDIO`, `SWCLK`, `NRST`, `BOOT0`, `OSC_IN`, `OSC_OUT`). They are already wired inside the MCU sheet.
-- [ ] **R14:** Add the MA702GQ, TCAN1042GV and EMI-filter symbols to a library in `sym-lib-table`.
+- [x] **R11:** Annotate the 49 un-annotated parts (`C?`, `R?`, `U?` on the CAN, encoder and MCU sheets). Until then, the netlist merges parts with the same reference. *Done.*
+- [ ] **R12:** Assign footprints to the parts on the CAN, encoder and MCU sheets (45 parts have none).
+- [x] **R13:** Delete the 6 dangling root-sheet labels (`SWDIO`, `SWCLK`, `NRST`, `BOOT0`, `OSC_IN`, `OSC_OUT`). They are already wired inside the MCU sheet. *Done.*
+- [ ] **R14:** Add the MA702GQ, TCAN1042GV and EMI-filter symbols to a library in `sym-lib-table`. *Symbols are in `hardware/nexus_drive.kicad_sym`, but `sym-lib-table` still needs the `nexus_drive` entry (3 ERC warnings).*
 - [ ] **R15:** The SWD header order (VCC, SWDIO, SWCLK, NRST, GND) is not a standard pinout. Match it to your programmer, or use the standard 10-pin Cortex debug connector.
 - [ ] **R16:** Check that the 12 pF crystal caps suit the 16 MHz crystal's load capacitance (12 pF caps ≈ 9–11 pF crystal with stray capacitance).
-- [ ] **R17:** PD10 (DRV chip select) has no label in the `.ioc`, and USART3 is assigned but not connected. Add a debug UART header or free the pins.
+- [ ] **R17:** PD10 (DRV chip select) has no label in the `.ioc`. *USART3 is now wired to J1 on the MCU sheet.*
 - [ ] **R18:** Consider split CAN termination (2 × 60 Ω + ~4.7 nF to GND) for better EMC on a long robot bus.
 - [ ] **R19:** Commit the literature review (moteus, ODrive, ODESC, ODRI) to `docs/`.
 
@@ -138,7 +144,7 @@ Then open `hardware/nexus_drive.kicad_pro` in KiCad.
 - [x] Create the KiCad project and repository
 - [ ] Define the specifications (battery voltage ✅, motor current, motor type)
 - [ ] Choose the main parts (gate driver ✅, MOSFETs ✅, MCU ✅, shunts, encoder)
-- [ ] Draw the schematic (phase power section ✅, gate driver ✅, MCU pin connections ✅)
+- [ ] Draw the schematic (phase power section ✅, gate driver ✅, MCU pin connections ✅, CAN-FD ✅, encoders ✅, sensing ✅, logic supplies, DC-link, input protection)
 - [ ] Lay out the PCB
 - [ ] Run design review, DRC and ERC
 - [ ] Order and assemble the first prototype

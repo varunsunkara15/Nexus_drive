@@ -1121,7 +1121,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 10.16 0 180)
 					(length 2.54)
 					(name ""
@@ -1139,7 +1139,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 0)
 					(length 2.54)
 					(name ""
@@ -1243,7 +1243,7 @@
 						(type none)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 10.16 270)
 					(length 2.54)
 					(name ""
@@ -1261,7 +1261,7 @@
 						)
 					)
 				)
-				(pin unspecified line
+				(pin passive line
 					(at 0 0 90)
 					(length 2.54)
 					(name ""
@@ -1290,7 +1290,7 @@
 		(uuid "3107214b-79f2-4bf5-b518-59c7d2b6ee26")
 	)
 	(junction
-		(at 47.625 133.985)
+		(at 48.26 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "777246d2-5d34-4a0a-a2a7-b67e083c3775")
@@ -1308,7 +1308,7 @@
 		(uuid "d6725437-28c5-4ca4-94ba-44a4cd1f06b7")
 	)
 	(junction
-		(at 113.03 36.195)
+		(at 113.03 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fda76167-e05d-4576-b4ea-8ff47a94eddf")
@@ -1321,7 +1321,7 @@
 	)
 	(wire
 		(pts
-			(xy 47.625 149.225) (xy 47.625 153.035)
+			(xy 48.26 149.86) (xy 48.26 153.67)
 		)
 		(stroke
 			(width 0)
@@ -1331,7 +1331,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 36.195) (xy 207.01 81.915)
+			(xy 207.01 36.83) (xy 207.01 82.55)
 		)
 		(stroke
 			(width 0)
@@ -1351,7 +1351,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.265 105.41) (xy 113.03 105.41)
+			(xy 88.9 105.41) (xy 113.03 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1361,7 +1361,7 @@
 	)
 	(wire
 		(pts
-			(xy 47.625 133.985) (xy 105.41 133.985)
+			(xy 48.26 134.62) (xy 105.41 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1381,7 +1381,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 30.48) (xy 113.03 36.195)
+			(xy 113.03 30.48) (xy 113.03 36.83)
 		)
 		(stroke
 			(width 0)
@@ -1391,7 +1391,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 139.065) (xy 113.03 158.75)
+			(xy 113.03 139.7) (xy 113.03 158.75)
 		)
 		(stroke
 			(width 0)
@@ -1401,7 +1401,7 @@
 	)
 	(wire
 		(pts
-			(xy 47.625 133.985) (xy 47.625 139.065)
+			(xy 48.26 134.62) (xy 48.26 139.7)
 		)
 		(stroke
 			(width 0)
@@ -1411,7 +1411,7 @@
 	)
 	(wire
 		(pts
-			(xy 20.955 133.985) (xy 47.625 133.985)
+			(xy 21.59 134.62) (xy 48.26 134.62)
 		)
 		(stroke
 			(width 0)
@@ -1431,7 +1431,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 36.195) (xy 207.01 36.195)
+			(xy 113.03 36.83) (xy 207.01 36.83)
 		)
 		(stroke
 			(width 0)
@@ -1441,7 +1441,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 105.41) (xy 182.245 105.41)
+			(xy 113.03 105.41) (xy 182.88 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1471,7 +1471,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 158.75) (xy 207.01 89.535)
+			(xy 207.01 158.75) (xy 207.01 90.17)
 		)
 		(stroke
 			(width 0)
@@ -1481,7 +1481,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 73.025) (xy 113.03 105.41)
+			(xy 113.03 73.66) (xy 113.03 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1491,7 +1491,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 36.195) (xy 113.03 62.865)
+			(xy 113.03 36.83) (xy 113.03 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1521,7 +1521,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.305 67.945) (xy 105.41 67.945)
+			(xy 27.94 68.58) (xy 105.41 68.58)
 		)
 		(stroke
 			(width 0)
@@ -1531,33 +1531,13 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 105.41) (xy 113.03 128.905)
+			(xy 113.03 105.41) (xy 113.03 129.54)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "f50b55b3-9dad-4126-87a1-bd0f5b191668")
-	)
-	(label "SXX_N"
-		(at 95.25 177.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "418b75ac-d3aa-4300-a0e8-a4a1fbe4ffbf")
-	)
-	(label "OUTX"
-		(at 118.11 105.41 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "80b32fba-a734-437a-98d5-36627054788b")
 	)
 	(label "SPX_Q"
 		(at 128.27 158.75 0)
@@ -1568,16 +1548,6 @@
 			(justify left bottom)
 		)
 		(uuid "d724b43f-f14c-4415-afa5-72b959453e25")
-	)
-	(label "SXX_P"
-		(at 95.25 167.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "da33359b-ac8a-49a1-91c1-a633d6ea5207")
 	)
 	(global_label "V+"
 		(shape input)
@@ -1629,7 +1599,7 @@
 	)
 	(global_label "GNDPWR"
 		(shape input)
-		(at 47.625 153.035 270)
+		(at 48.26 153.67 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1639,7 +1609,7 @@
 		)
 		(uuid "eac76b0a-5be4-4acf-81cb-29b1fba22569")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 47.625 163.8821 90)
+			(at 48.26 164.5171 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1653,7 +1623,7 @@
 	)
 	(hierarchical_label "SHX"
 		(shape input)
-		(at 88.265 105.41 180)
+		(at 88.9 105.41 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1664,7 +1634,7 @@
 	)
 	(hierarchical_label "GHX"
 		(shape input)
-		(at 27.305 67.945 180)
+		(at 27.94 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1675,7 +1645,7 @@
 	)
 	(hierarchical_label "GLX"
 		(shape input)
-		(at 20.955 133.985 180)
+		(at 21.59 134.62 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1709,7 +1679,7 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 23.495 133.985 0)
+		(at 24.13 134.62 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1719,7 +1689,7 @@
 		)
 		(uuid "0e75c07b-527b-47c6-a89a-ef23c4771a0d")
 		(property "Netclass" "Gate"
-			(at 24.1935 131.445 0)
+			(at 24.8285 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1734,7 +1704,7 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 73.66 133.985 0)
+		(at 73.66 134.62 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1744,7 +1714,7 @@
 		)
 		(uuid "6363678d-453f-4d40-af73-96d94c43e5a4")
 		(property "Netclass" "Gate"
-			(at 74.3585 131.445 0)
+			(at 74.3585 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1784,7 +1754,7 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 66.675 67.945 0)
+		(at 66.04 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1794,7 +1764,7 @@
 		)
 		(uuid "ba6ab38b-b0e1-4634-bc52-d39add9a1019")
 		(property "Netclass" "Gate"
-			(at 67.3735 65.405 0)
+			(at 66.7385 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1809,7 +1779,7 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 29.845 67.945 0)
+		(at 30.48 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1819,7 +1789,7 @@
 		)
 		(uuid "bb2a394c-c414-44b9-b39c-6d1ad755cc71")
 		(property "Netclass" "Gate"
-			(at 30.5435 65.405 0)
+			(at 31.1785 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1934,7 +1904,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Net tie, 2 pins"
 			(at 110.49 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -1970,7 +1940,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x01")
-		(at 187.325 105.41 0)
+		(at 187.96 105.41 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1981,7 +1951,7 @@
 		(fields_autoplaced yes)
 		(uuid "1cdba4f6-eebb-4109-8645-7244a97479df")
 		(property "Reference" "X1"
-			(at 189.865 104.14 0)
+			(at 190.5 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1992,7 +1962,7 @@
 			)
 		)
 		(property "Value" "Conn_01x01"
-			(at 189.865 106.68 0)
+			(at 190.5 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2003,7 +1973,7 @@
 			)
 		)
 		(property "Footprint" "moteus:POWER_M2.5"
-			(at 187.325 105.41 0)
+			(at 187.96 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2014,7 +1984,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.325 105.41 0)
+			(at 187.96 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2024,8 +1994,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 187.325 105.41 0)
+		(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 187.96 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2057,7 +2027,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 207.01 85.725 0)
+		(at 207.01 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2068,7 +2038,7 @@
 		(fields_autoplaced yes)
 		(uuid "2cbb3d44-771f-44cc-9755-3e2d3b702720")
 		(property "Reference" "C24"
-			(at 210.82 84.455 0)
+			(at 210.82 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2079,7 +2049,7 @@
 			)
 		)
 		(property "Value" "0.1uF 100V"
-			(at 210.82 86.995 0)
+			(at 210.82 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2090,7 +2060,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1812_4532Metric"
-			(at 207.9752 89.535 0)
+			(at 207.9752 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2101,7 +2071,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 207.01 85.725 0)
+			(at 207.01 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2111,8 +2081,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 207.01 85.725 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 207.01 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2123,7 +2093,7 @@
 			)
 		)
 		(property "MPN" "18121C104MAT2A"
-			(at 207.01 85.725 0)
+			(at 207.01 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2134,7 +2104,7 @@
 			)
 		)
 		(property "MF" "KYOCERA AVX"
-			(at 207.01 85.725 0)
+			(at 207.01 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2145,7 +2115,7 @@
 			)
 		)
 		(property "POPULATE" "1"
-			(at 207.01 85.725 0)
+			(at 207.01 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2180,7 +2150,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:FDMT80080DC")
-		(at 110.49 67.945 0)
+		(at 110.49 68.58 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2191,7 +2161,7 @@
 		(fields_autoplaced yes)
 		(uuid "3d33ec41-32f5-4ed1-b6bd-c56e7d18bd40")
 		(property "Reference" "Q1"
-			(at 116.84 66.675 0)
+			(at 116.84 67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2202,7 +2172,7 @@
 			)
 		)
 		(property "Value" "FDMT80080DC"
-			(at 116.84 69.215 0)
+			(at 116.84 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2213,7 +2183,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:PQFN_8x8"
-			(at 115.57 69.85 0)
+			(at 115.57 70.485 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2226,7 +2196,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMT80080DC-D.pdf"
-			(at 115.57 71.755 0)
+			(at 115.57 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2237,8 +2207,8 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
-			(at 110.49 67.945 0)
+		(property "Description" "36A Id, 80V Vds, N-Channel Dual Cool PowerTrench MOSFET, 1.35mOhm Ron, 273nC Qgmax, -55 to 150 °C, 8x8mm MLP"
+			(at 110.49 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2249,7 +2219,7 @@
 			)
 		)
 		(property "MPN" "FDMT80080DC"
-			(at 110.49 67.945 0)
+			(at 110.49 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2260,7 +2230,7 @@
 			)
 		)
 		(property "MF" "ONSEMI"
-			(at 110.49 67.945 0)
+			(at 110.49 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2271,7 +2241,7 @@
 			)
 		)
 		(property "POPULATE" "1"
-			(at 110.49 67.945 0)
+			(at 110.49 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2361,7 +2331,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Net tie, 2 pins"
 			(at 110.49 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -2397,7 +2367,7 @@
 	)
 	(symbol
 		(lib_id "moteus:BAT41KFILM")
-		(at 47.625 149.225 270)
+		(at 48.26 149.86 270)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -2409,7 +2379,7 @@
 		(fields_autoplaced yes)
 		(uuid "c64dc0e4-eddf-416e-928c-0c84589c72ba")
 		(property "Reference" "D4"
-			(at 51.435 142.875 90)
+			(at 52.07 143.51 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2420,7 +2390,7 @@
 			)
 		)
 		(property "Value" "BAT41KFILM"
-			(at 51.435 145.415 90)
+			(at 52.07 146.05 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2431,7 +2401,7 @@
 			)
 		)
 		(property "Footprint" "moteus:SOD-523_STM"
-			(at 47.625 149.225 0)
+			(at 48.26 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2443,7 +2413,7 @@
 			)
 		)
 		(property "Datasheet" "BAT41KFILM"
-			(at 47.625 149.225 0)
+			(at 48.26 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2455,7 +2425,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 47.625 149.225 0)
+			(at 48.26 149.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2466,7 +2436,7 @@
 			)
 		)
 		(property "MPN" "BAT41KFILM"
-			(at 47.625 149.225 90)
+			(at 48.26 149.86 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2477,7 +2447,7 @@
 			)
 		)
 		(property "MF" "ST"
-			(at 47.625 149.225 90)
+			(at 48.26 149.86 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2488,7 +2458,7 @@
 			)
 		)
 		(property "POPULATE" "1"
-			(at 47.625 149.225 90)
+			(at 48.26 149.86 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2578,7 +2548,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 113.03 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -2647,7 +2617,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_FET:FDMT80080DC")
-		(at 110.49 133.985 0)
+		(at 110.49 134.62 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2658,7 +2628,7 @@
 		(fields_autoplaced yes)
 		(uuid "f1c6c586-8f01-48fe-a7b1-9d105c0cd4b8")
 		(property "Reference" "Q2"
-			(at 116.84 132.715 0)
+			(at 116.84 133.35 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2669,7 +2639,7 @@
 			)
 		)
 		(property "Value" "FDMT80080DC"
-			(at 116.84 135.255 0)
+			(at 116.84 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2680,7 +2650,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:PQFN_8x8"
-			(at 115.57 135.89 0)
+			(at 115.57 136.525 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2693,7 +2663,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/FDMT80080DC-D.pdf"
-			(at 115.57 137.795 0)
+			(at 115.57 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2704,8 +2674,8 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
-			(at 110.49 133.985 0)
+		(property "Description" "36A Id, 80V Vds, N-Channel Dual Cool PowerTrench MOSFET, 1.35mOhm Ron, 273nC Qgmax, -55 to 150 °C, 8x8mm MLP"
+			(at 110.49 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2716,7 +2686,7 @@
 			)
 		)
 		(property "MPN" "FDMT80080DC"
-			(at 110.49 133.985 0)
+			(at 110.49 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2727,7 +2697,7 @@
 			)
 		)
 		(property "MF" "ONSEMI"
-			(at 110.49 133.985 0)
+			(at 110.49 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2738,7 +2708,7 @@
 			)
 		)
 		(property "POPULATE" "1"
-			(at 110.49 133.985 0)
+			(at 110.49 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -715,7 +715,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 77.47 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -819,7 +819,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 87.63 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -923,7 +923,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 87.63 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -1027,7 +1027,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 87.63 127 0)
 			(hide yes)
 			(show_name no)
@@ -1129,7 +1129,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 77.47 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -1231,7 +1231,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 77.47 85.09 0)
 			(hide yes)
 			(show_name no)

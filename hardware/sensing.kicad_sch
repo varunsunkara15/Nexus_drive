@@ -28,7 +28,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "Conn_01x02"
@@ -39,7 +38,6 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -53,7 +51,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -76,6 +74,17 @@
 				)
 			)
 			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -205,7 +214,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -217,7 +226,7 @@
 				)
 			)
 			(property "Description" "Unpolarized capacitor, small symbol"
-				(at 0 0 0)
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -279,7 +288,7 @@
 				(pin passive line
 					(at 0 2.54 270)
 					(length 2.032)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -297,7 +306,7 @@
 				(pin passive line
 					(at 0 -2.54 90)
 					(length 2.032)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -329,25 +338,23 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "NT"
-				(at 0 1.905 0)
+				(at 0 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "NetTie_2"
-				(at 0 -1.905 0)
+				(at 0 -1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -361,7 +368,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -394,6 +401,17 @@
 					)
 				)
 			)
+			(property "ki_fp_filters" "Net*Tie*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(symbol "NetTie_2_0_1"
 				(polyline
 					(pts
@@ -411,7 +429,7 @@
 			(symbol "NetTie_2_1_1"
 				(pin passive line
 					(at -2.54 0 0)
-					(length 1.27)
+					(length 2.54)
 					(name "1"
 						(effects
 							(font
@@ -429,7 +447,7 @@
 				)
 				(pin passive line
 					(at 2.54 0 180)
-					(length 1.27)
+					(length 2.54)
 					(name "2"
 						(effects
 							(font
@@ -462,25 +480,23 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "R"
-				(at 1.016 0.762 0)
+				(at 0 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(size 1.016 1.016)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "R_Small"
-				(at 1.016 -1.016 0)
+				(at 1.778 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -494,7 +510,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -555,7 +571,7 @@
 				(pin passive line
 					(at 0 2.54 270)
 					(length 0.762)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -573,7 +589,7 @@
 				(pin passive line
 					(at 0 -2.54 90)
 					(length 0.762)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -597,7 +613,6 @@
 			)
 			(pin_names
 				(offset 0)
-				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -605,29 +620,27 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "TH"
-				(at 2.54 1.27 0)
+				(at -4.445 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Value" "Thermistor_NTC"
-				(at 2.54 -1.27 0)
+				(at 3.175 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at 0 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -637,8 +650,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
+			(property "Datasheet" ""
+				(at 0 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -670,10 +683,105 @@
 					)
 				)
 			)
+			(property "ki_fp_filters" "R_* RV_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(symbol "Thermistor_NTC_0_1"
+				(arc
+					(start -3.175 2.413)
+					(mid -3.0506 2.3165)
+					(end -3.048 2.159)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.048 2.794)
+					(mid -2.9736 2.9736)
+					(end -2.794 3.048)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.794 3.048)
+					(mid -2.6144 2.9736)
+					(end -2.54 2.794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.794 2.54)
+					(mid -2.9736 2.6144)
+					(end -3.048 2.794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.794 1.905)
+					(mid -2.9736 1.9794)
+					(end -3.048 2.159)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.54 2.159)
+					(mid -2.6144 1.9794)
+					(end -2.794 1.905)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.159 2.794)
+					(mid -2.434 2.5608)
+					(end -2.794 2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(polyline
 					(pts
-						(xy -1.778 2.54) (xy -1.778 1.778) (xy 1.778 -1.778)
+						(xy -2.54 2.159) (xy -2.54 2.794)
 					)
 					(stroke
 						(width 0)
@@ -683,11 +791,48 @@
 						(type none)
 					)
 				)
+				(polyline
+					(pts
+						(xy -2.54 -3.683) (xy -2.54 -1.397) (xy -2.794 -2.159) (xy -2.286 -2.159) (xy -2.54 -1.397) (xy -2.54 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.54) (xy -1.778 1.524) (xy 1.778 -1.524) (xy 1.778 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -1.397) (xy -1.778 -3.683) (xy -2.032 -2.921) (xy -1.524 -2.921) (xy -1.778 -3.683)
+						(xy -1.778 -3.429)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(rectangle
 					(start -1.016 2.54)
 					(end 1.016 -2.54)
 					(stroke
-						(width 0.2032)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -699,7 +844,7 @@
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -717,7 +862,7 @@
 				(pin passive line
 					(at 0 -3.81 90)
 					(length 1.27)
-					(name "~"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2083,7 +2228,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "04b5b151-0368-42e7-b749-240e11c3d0eb")
-		(property "Reference" "TH?"
+		(property "Reference" "TH1"
 			(at 46.99 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2129,7 +2274,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Temperature dependent resistor, negative temperature coefficient"
 			(at 44.45 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2150,7 +2295,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "TH?")
+					(reference "TH1")
 					(unit 1)
 				)
 			)
@@ -2167,7 +2312,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "08ab47fd-7bf8-4b36-945e-cb8efa3c4304")
-		(property "Reference" "C?"
+		(property "Reference" "C32"
 			(at 58.928 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2213,7 +2358,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 57.15 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -2234,7 +2379,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "C?")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -2251,7 +2396,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0e73a3a5-7b6d-467d-9397-cab515c736f3")
-		(property "Reference" "C?"
+		(property "Reference" "C36"
 			(at 173.228 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2297,7 +2442,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 171.45 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -2318,7 +2463,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "C?")
+					(reference "C36")
 					(unit 1)
 				)
 			)
@@ -2335,7 +2480,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "15b9176d-3cb7-4ab1-a958-b456d40129ff")
-		(property "Reference" "R?"
+		(property "Reference" "R29"
 			(at 103.378 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2381,7 +2526,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 101.6 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -2402,7 +2547,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -2419,7 +2564,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1b6b97af-bef1-4832-a1c2-e590d9912de7")
-		(property "Reference" "C?"
+		(property "Reference" "C33"
 			(at 116.078 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2465,7 +2610,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 114.3 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -2486,7 +2631,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "C?")
+					(reference "C33")
 					(unit 1)
 				)
 			)
@@ -2503,7 +2648,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1fc5f8c7-e2b7-4ae9-80bd-778065d39f06")
-		(property "Reference" "R?"
+		(property "Reference" "R32"
 			(at 160.528 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2549,7 +2694,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 158.75 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -2570,7 +2715,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -2587,7 +2732,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "29ba7c53-6e68-4592-be17-66dee9b285cd")
-		(property "Reference" "R?"
+		(property "Reference" "R25"
 			(at 46.228 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2633,7 +2778,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 44.45 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -2654,7 +2799,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -2671,7 +2816,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2c5631a2-bd48-4e8d-9c49-4f00e6c96d61")
-		(property "Reference" "NT?"
+		(property "Reference" "NT1"
 			(at 265.43 48.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2715,7 +2860,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Net tie, 2 pins"
 			(at 265.43 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -2736,7 +2881,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "NT?")
+					(reference "NT1")
 					(unit 1)
 				)
 			)
@@ -2753,7 +2898,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2d0aaec5-1740-404a-930b-39edf3ddfecb")
-		(property "Reference" "R?"
+		(property "Reference" "R37"
 			(at 217.678 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2799,7 +2944,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 215.9 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -2820,7 +2965,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R37")
 					(unit 1)
 				)
 			)
@@ -2837,7 +2982,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3c799dd4-fbb3-4410-92c5-3f718a1306fb")
-		(property "Reference" "J?"
+		(property "Reference" "J7"
 			(at 181.61 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2881,7 +3026,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 181.61 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -2902,7 +3047,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "J?")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -2919,7 +3064,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "47334b44-dc6a-4969-9a60-b8439026e161")
-		(property "Reference" "R?"
+		(property "Reference" "R30"
 			(at 103.378 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2965,7 +3110,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 101.6 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -2986,7 +3131,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -3003,7 +3148,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "53e7fc2f-1599-4588-94ea-8e6f47f33e4d")
-		(property "Reference" "C?"
+		(property "Reference" "C35"
 			(at 160.528 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3049,7 +3194,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 158.75 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3070,7 +3215,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "C?")
+					(reference "C35")
 					(unit 1)
 				)
 			)
@@ -3087,7 +3232,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7c4d38b4-f2c8-4f8d-b9e1-253b36337bb9")
-		(property "Reference" "R?"
+		(property "Reference" "R34"
 			(at 160.528 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3133,7 +3278,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 158.75 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -3154,7 +3299,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -3171,7 +3316,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "84fbd980-fdf6-4f5b-aebd-b26f60221d30")
-		(property "Reference" "R?"
+		(property "Reference" "R38"
 			(at 217.678 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3217,7 +3362,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 215.9 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -3238,7 +3383,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R38")
 					(unit 1)
 				)
 			)
@@ -3255,7 +3400,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8d134843-a2dd-440f-b908-a36ddca46326")
-		(property "Reference" "R?"
+		(property "Reference" "R35"
 			(at 160.528 125.73 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3301,7 +3446,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 158.75 127 0)
 			(hide yes)
 			(show_name no)
@@ -3322,7 +3467,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R35")
 					(unit 1)
 				)
 			)
@@ -3339,7 +3484,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9627e5a6-0c5e-4aa4-833f-0938817d6c93")
-		(property "Reference" "R?"
+		(property "Reference" "R28"
 			(at 103.378 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3385,7 +3530,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 101.6 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -3406,7 +3551,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -3423,7 +3568,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a25975dd-4a5f-4ad7-97dd-299d55dbabaa")
-		(property "Reference" "R?"
+		(property "Reference" "R26"
 			(at 46.228 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3469,7 +3614,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 44.45 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -3490,7 +3635,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -3507,7 +3652,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a2c20782-1921-4182-a026-d663d73225a3")
-		(property "Reference" "R?"
+		(property "Reference" "R27"
 			(at 46.228 125.73 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3553,7 +3698,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 44.45 127 0)
 			(hide yes)
 			(show_name no)
@@ -3574,7 +3719,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -3591,7 +3736,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ac0ad035-1492-4c79-adfe-77a79ffb50e9")
-		(property "Reference" "C?"
+		(property "Reference" "C34"
 			(at 116.078 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3637,7 +3782,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 114.3 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3658,7 +3803,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "C?")
+					(reference "C34")
 					(unit 1)
 				)
 			)
@@ -3675,7 +3820,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ad2695aa-3ec4-4aaf-8547-9251e8df200e")
-		(property "Reference" "TH?"
+		(property "Reference" "TH2"
 			(at 104.14 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3721,7 +3866,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Temperature dependent resistor, negative temperature coefficient"
 			(at 101.6 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -3742,7 +3887,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "TH?")
+					(reference "TH2")
 					(unit 1)
 				)
 			)
@@ -3759,7 +3904,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "be682823-3b58-44e0-b482-64bafd6ccbf2")
-		(property "Reference" "R?"
+		(property "Reference" "R33"
 			(at 160.528 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3805,7 +3950,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 158.75 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -3826,7 +3971,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -3843,7 +3988,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d3c5e672-4fff-43a5-9c11-2aa583cf00b0")
-		(property "Reference" "R?"
+		(property "Reference" "R24"
 			(at 46.228 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3889,7 +4034,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 44.45 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -3910,7 +4055,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -3927,7 +4072,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d8809443-89ce-4562-87d9-615846bcd6a4")
-		(property "Reference" "C?"
+		(property "Reference" "C37"
 			(at 230.378 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3973,7 +4118,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 228.6 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -3994,7 +4139,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "C?")
+					(reference "C37")
 					(unit 1)
 				)
 			)
@@ -4011,7 +4156,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e415938a-9155-4260-bc03-3885bb3c3707")
-		(property "Reference" "R?"
+		(property "Reference" "R31"
 			(at 103.378 125.73 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4057,7 +4202,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 101.6 127 0)
 			(hide yes)
 			(show_name no)
@@ -4078,7 +4223,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -4095,7 +4240,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "eb5cbb6f-2a07-4406-b433-33b264f8e196")
-		(property "Reference" "R?"
+		(property "Reference" "R36"
 			(at 217.678 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4141,7 +4286,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, small symbol"
 			(at 215.9 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -4162,7 +4307,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "R?")
+					(reference "R36")
 					(unit 1)
 				)
 			)
@@ -4179,7 +4324,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ebd690ab-c1a5-4ea4-9ab7-b4782ddb3edd")
-		(property "Reference" "C?"
+		(property "Reference" "C31"
 			(at 58.928 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4225,7 +4370,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 57.15 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -4246,7 +4391,7 @@
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "C?")
+					(reference "C31")
 					(unit 1)
 				)
 			)
