@@ -313,7 +313,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x03"
+		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -333,8 +333,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x03"
-				(at 0 -5.08 0)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -365,7 +365,7 @@
 					)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -398,10 +398,10 @@
 					)
 				)
 			)
-			(symbol "Conn_01x03_1_1"
+			(symbol "Conn_01x04_1_1"
 				(rectangle
 					(start -1.27 3.81)
-					(end 1.27 -3.81)
+					(end 1.27 -6.35)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -435,6 +435,17 @@
 				(rectangle
 					(start -1.27 -2.413)
 					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -490,6 +501,24 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3667,6 +3696,16 @@
 		)
 		(uuid "0f63bd07-cacf-4286-82dd-1872215bcf42")
 	)
+	(text "J1: UART debug header\nPlug-in HC-05 module (TX, RX, +5V, GND)"
+		(exclude_from_sim no)
+		(at 312.42 154.94 0)
+		(effects
+			(font
+				(size 0.762 0.762)
+			)
+		)
+		(uuid "219d6dcb-1115-4655-92c4-aa78a53c63ff")
+	)
 	(text "TODO (MCU owner): decoupling caps, VDDA filter, HSE crystal/oscillator, NRST cap + SWD header, BOOT0 pull-down."
 		(exclude_from_sim no)
 		(at 25.4 36.83 0)
@@ -3966,7 +4005,7 @@
 	)
 	(wire
 		(pts
-			(xy 294.64 147.32) (xy 294.64 152.4)
+			(xy 294.64 149.86) (xy 294.64 152.4)
 		)
 		(stroke
 			(width 0)
@@ -4483,6 +4522,16 @@
 			(type default)
 		)
 		(uuid "87fc5bc9-a004-48bb-8de9-66287038f353")
+	)
+	(wire
+		(pts
+			(xy 294.64 149.86) (xy 299.72 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f683109-afe6-4170-b8fa-6ebf2b316824")
 	)
 	(wire
 		(pts
@@ -5161,6 +5210,30 @@
 		(uuid "1aae8764-bbe9-4fd9-b551-f43d52a2ae5c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "+5V"
+		(shape passive)
+		(at 294.64 147.32 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1dda5435-1b08-44a3-b4ea-d730b483fa6c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 294.64 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6288,7 +6361,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
+		(lib_id "Connector_Generic:Conn_01x04")
 		(at 304.8 144.78 0)
 		(unit 1)
 		(body_style 1)
@@ -6310,7 +6383,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x03"
+		(property "Value" "Conn_01x04"
 			(at 307.34 146.0499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6321,7 +6394,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x03_P1.27mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical"
 			(at 304.8 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -6343,7 +6416,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 304.8 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -6362,6 +6435,9 @@
 		)
 		(pin "3"
 			(uuid "67a1f943-9d9a-4cf4-b388-edbafd5e4f87")
+		)
+		(pin "4"
+			(uuid "1369ad4a-1ee6-4ff5-b2f3-3510756fe652")
 		)
 		(instances
 			(project "nexus_drive"
