@@ -54,7 +54,7 @@
 				)
 			)
 		)
-		(property "Description" "Common mode choke / EMI filter (windings 1-2 and 4-3)"
+		(property "Description" "Common mode choke / EMI filter (windings 1-4 and 2-3)"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -220,14 +220,14 @@
 			(pin passive line
 				(at 7.62 2.54 180)
 				(length 3.81)
-				(name "2"
+				(name "4"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "2"
+				(number "4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -256,14 +256,14 @@
 			(pin passive line
 				(at -7.62 -2.54 0)
 				(length 3.81)
-				(name "4"
+				(name "2"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "4"
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)

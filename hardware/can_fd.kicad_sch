@@ -1075,7 +1075,7 @@
 					)
 				)
 			)
-			(property "Description" "Common mode choke / EMI filter (windings 1-2 and 4-3)"
+			(property "Description" "Common mode choke / EMI filter (windings 1-4 and 2-3)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1241,14 +1241,14 @@
 				(pin passive line
 					(at 7.62 2.54 180)
 					(length 3.81)
-					(name "2"
+					(name "4"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1277,14 +1277,14 @@
 				(pin passive line
 					(at -7.62 -2.54 0)
 					(length 3.81)
-					(name "4"
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2324,7 +2324,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
 			(at 236.22 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -2408,7 +2408,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 236.22 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2492,7 +2492,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 81.28 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -2576,7 +2576,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 83.82 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -2658,7 +2658,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "nexus_drive:L_CommonMode_TDK_ACT1210D"
 			(at 127 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -2833,7 +2833,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical"
 			(at 205.74 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -2923,7 +2923,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 88.9 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -3007,7 +3007,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 111.76 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -3089,7 +3089,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical"
 			(at 205.74 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -3179,7 +3179,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 101.6 101.6 0)
 			(hide yes)
 			(show_name no)
