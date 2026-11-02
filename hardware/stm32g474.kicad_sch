@@ -3696,7 +3696,7 @@
 		)
 		(uuid "0f63bd07-cacf-4286-82dd-1872215bcf42")
 	)
-	(text "J1: UART debug header\nPlug-in HC-05 module (TX, RX, +5V, GND)"
+	(text "J1: HC-05 UART header (2.54 mm)\n1 MCU TX > RXD, 2 MCU RX > TXD, 3 GND, 4 +5V > VCC"
 		(exclude_from_sim no)
 		(at 312.42 154.94 0)
 		(effects
@@ -4005,7 +4005,7 @@
 	)
 	(wire
 		(pts
-			(xy 294.64 149.86) (xy 294.64 152.4)
+			(xy 294.64 147.32) (xy 294.64 152.4)
 		)
 		(stroke
 			(width 0)
@@ -4525,13 +4525,23 @@
 	)
 	(wire
 		(pts
-			(xy 294.64 149.86) (xy 299.72 149.86)
+			(xy 297.18 149.86) (xy 299.72 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8f683109-afe6-4170-b8fa-6ebf2b316824")
+	)
+	(wire
+		(pts
+			(xy 297.18 149.86) (xy 297.18 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9fdf091-7fd6-4899-ad4a-623242bbad7c")
 	)
 	(wire
 		(pts
@@ -5223,7 +5233,7 @@
 	)
 	(global_label "+5V"
 		(shape passive)
-		(at 294.64 147.32 180)
+		(at 297.18 152.4 270)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5233,7 +5243,7 @@
 		)
 		(uuid "1dda5435-1b08-44a3-b4ea-d730b483fa6c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 294.64 147.32 0)
+			(at 297.18 152.4 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6394,7 +6404,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 304.8 144.78 0)
 			(hide yes)
 			(show_name no)
