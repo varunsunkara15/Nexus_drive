@@ -480,6 +480,16 @@
 	)
 	(wire
 		(pts
+			(xy 327.66 195.58) (xy 335.28 195.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bb8d99c-fb90-49b4-8eb3-d7468526b128")
+	)
+	(wire
+		(pts
 			(xy 293.37 177.8) (xy 300.99 177.8)
 		)
 		(stroke
@@ -1927,6 +1937,16 @@
 			(justify right bottom)
 		)
 		(uuid "4d589db9-985c-46f9-a19a-42590bbc138e")
+	)
+	(label "TEMP_MOTOR"
+		(at 327.66 195.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d9706d1c-27f2-4f10-8e54-b61ee73763c4")
 	)
 	(label "GLC"
 		(at 259.08 60.96 180)
@@ -3667,6 +3687,16 @@
 		(pin "CAN_STB" input
 			(at 335.28 193.04 180)
 			(uuid "91a734de-7a20-4cc4-99ba-dbed98a9c243")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "TEMP_MOTOR" bidirectional
+			(at 335.28 195.58 180)
+			(uuid "0db751fb-1b2e-429f-8597-2d1d107ad7ab")
 			(effects
 				(font
 					(size 1.27 1.27)

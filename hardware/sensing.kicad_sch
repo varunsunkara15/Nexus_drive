@@ -10,164 +10,6 @@
 		(comment 1 "DC bus, phase voltage and NTC temperature sensing")
 	)
 	(lib_symbols
-		(symbol "Connector_Generic:Conn_01x02"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "J"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x02"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Conn_01x02_1_1"
-				(rectangle
-					(start -1.27 1.27)
-					(end 1.27 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -903,7 +745,7 @@
 		)
 		(uuid "0ee0bdc3-e9cc-467e-b5a9-f750ca765040")
 	)
-	(text "Motor NTC via 2-pin connector"
+	(text "Motor NTC via J3 pins 7-8 (CAN sheet)"
 		(exclude_from_sim no)
 		(at 152.146 164.338 0)
 		(effects
@@ -914,7 +756,7 @@
 		)
 		(uuid "142e7601-cf66-47a6-848e-59782ff82a66")
 	)
-	(text "D14 / D15: NTC temperature sensing (10k pull-up to +3V, 10k NTC to GNDA)"
+	(text "D14 / D15: NTC temperature sensing (10k pull-up to +3VA, 10k NTC to GNDA)"
 		(exclude_from_sim no)
 		(at 25.4 109.22 0)
 		(effects
@@ -1237,16 +1079,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 154.94) (xy 176.53 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40f1922e-7b5e-4422-87d1-da153ccf6475")
-	)
-	(wire
-		(pts
 			(xy 158.75 134.62) (xy 151.13 134.62)
 		)
 		(stroke
@@ -1347,16 +1179,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 134.62) (xy 176.53 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6fefa849-66ac-437c-8d1d-6ca9867acd8b")
-	)
-	(wire
-		(pts
 			(xy 101.6 134.62) (xy 114.3 134.62)
 		)
 		(stroke
@@ -1414,16 +1236,6 @@
 			(type default)
 		)
 		(uuid "7f331aa8-4d42-40e6-84eb-d6a39d0e974b")
-	)
-	(wire
-		(pts
-			(xy 176.53 137.16) (xy 176.53 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83b418ab-19b4-45c1-beb1-d1761ad9d7a7")
 	)
 	(wire
 		(pts
@@ -1891,7 +1703,7 @@
 			)
 		)
 	)
-	(global_label "+3V"
+	(global_label "+3VA"
 		(shape passive)
 		(at 44.45 118.11 90)
 		(fields_autoplaced yes)
@@ -1963,7 +1775,7 @@
 			)
 		)
 	)
-	(global_label "+3V"
+	(global_label "+3VA"
 		(shape passive)
 		(at 101.6 118.11 90)
 		(fields_autoplaced yes)
@@ -2059,7 +1871,7 @@
 			)
 		)
 	)
-	(global_label "+3V"
+	(global_label "+3VA"
 		(shape passive)
 		(at 158.75 118.11 90)
 		(fields_autoplaced yes)
@@ -2966,88 +2778,6 @@
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
 					(reference "R37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
-		(at 181.61 134.62 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3c799dd4-fbb3-4410-92c5-3f718a1306fb")
-		(property "Reference" "J7"
-			(at 181.61 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Motor NTC"
-			(at 181.61 140.97 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical"
-			(at 181.61 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 181.61 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 181.61 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "1"
-			(uuid "bc17b375-562e-4c79-aa1f-d71afd317055")
-		)
-		(pin "2"
-			(uuid "0347d6ba-9dd3-4313-9557-7201cb14e1ff")
-		)
-		(instances
-			(project "nexus_drive"
-				(path "/2d97709d-a8ce-4889-9b37-2fa808653238/9aef1f14-2bb8-4ccd-9b80-556ee8898352"
-					(reference "J7")
 					(unit 1)
 				)
 			)

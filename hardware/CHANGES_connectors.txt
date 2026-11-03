@@ -1,0 +1,20 @@
+[encoders.kicad_sch]
+  J6 deleted (symbol, 6 wires, 4 P1_* labels, +3V/GND global labels at its pins)
+  J5 -> Connector:Conn_01x12_Pin, footprint Connector_JST:JST_PH_B12B-PH-K_1x12_P2.00mm_Vertical, origin y 167.64 -> 175.26 so pins 1-6 stay where they were
+  J5 pins 7-12 wired like old J6: +3V, P1_SCK, P1_MISO, P1_MOSI, P1_CS, GND (old J6 stubs/labels moved to J5, new uuids)
+  lib_symbols: Conn_01x06_Pin cache replaced by Conn_01x12_Pin; J5 pins 7-12 new uuids
+  note text "JST-GH 6-pin port pinout" reworded for the 12-pin J5
+[can_fd.kicad_sch]
+  J4 deleted (symbol, 3 wires, CANH/CANL labels, GND global label); both pin-4 no-connect flags (J3, J4) deleted
+  J3 -> Connector:Conn_01x08_Pin, footprint Connector_JST:JST_PH_B8B-PH-K_1x08_P2.00mm_Vertical, origin y 88.9 -> 93.98 so pins 1-3 stay where they were
+  J3 pins 4-6 = CANH, CANL, GND (old J4 stubs/labels moved up, new uuids)
+  J3 pin 7 = hierarchical_label TEMP_MOTOR (bidirectional); pin 8 = global_label GNDA
+  lib_symbols: Conn_01x04_Pin cache replaced by Conn_01x08_Pin; J3 pins 5-8 new uuids
+  note text "D7: two Conn_01x04 ..." reworded for the 8-pin J3
+[sensing.kicad_sch]
+  J7 deleted, plus its 3 wires (TEMP_MOTOR stub to J7, GNDA run to J7); Connector_Generic:Conn_01x02 cache removed (unused)
+  TEMP_MOTOR divider (R35/C35) and hierarchical_label TEMP_MOTOR unchanged; GNDA labels unchanged
+[nexus_drive.kicad_sch]  (root)
+  CAN sheet: added sheet pin TEMP_MOTOR (bidirectional) at (335.28,195.58), wire to (327.66,195.58), local label TEMP_MOTOR
+  (joins existing TEMP_MOTOR net: Sensing pin <-> MCU pin). PWR_FLAGs untouched.
+Not modified: current_sense, gate_driver, h_bridge, stm32g474, .kicad_pro, .kicad_pcb
