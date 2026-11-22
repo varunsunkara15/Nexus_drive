@@ -11,6 +11,325 @@
 		(comment 2 "Modified: INLA/INLB/INLC split out (was MOTOR_HIZ) for 6-PWM mode")
 	)
 	(lib_symbols
+		(symbol "Device:NetTie_2"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "NT"
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NetTie_2"
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Net tie, 2 pins"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "net tie short"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Net*Tie*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "NetTie_2_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NetTie_2_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C_Polarized"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Polarized"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Polarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "CP_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_Polarized_0_1"
+				(rectangle
+					(start -2.286 0.508)
+					(end 2.286 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.286) (xy -0.762 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.794) (xy -1.27 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.286 -0.508)
+					(end -2.286 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "C_Polarized_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -1952,7 +2271,7 @@
 			)
 		)
 	)
-	(global_label "GND"
+	(global_label "GNDPWR"
 		(shape input)
 		(at 52.07 64.77 270)
 		(fields_autoplaced yes)
@@ -1976,7 +2295,7 @@
 			)
 		)
 	)
-	(global_label "GND"
+	(global_label "GNDPWR"
 		(shape input)
 		(at 69.85 120.65 180)
 		(fields_autoplaced yes)
@@ -3623,4 +3942,52 @@
 			)
 		)
 	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 30.48 46.99 0)
+		(unit 1)
+		(body_style 1)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3ae850a1-ef66-502a-ba97-9dd6bfd64f56")
+		(property "Reference" "C38" (at 33.02 44.45 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "22uF 25V" (at 33.02 46.99 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.8" (at 30.48 46.99 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-smd/models/EEEFK1E220AR" (at 30.48 46.99 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Description" "VM local bulk, polarized aluminum" (at 30.48 46.99 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "MPN" "EEEFK1E220AR" (at 30.48 46.99 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+		(pin "1" (uuid "cce7e9d2-6923-5056-abff-0ec10a974e04"))
+		(pin "2" (uuid "9a2527d8-a396-5057-927d-1b4e34931ea9"))
+		(instances (project "nexus_drive" (path "/2d97709d-a8ce-4889-9b37-2fa808653238/b408431b-0e42-4242-b4c3-a4965027c029" (reference "C38") (unit 1))))
+	)
+	(symbol
+		(lib_id "Device:NetTie_2")
+		(at 186.69 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "cd8e1ffc-ac3a-5d13-be72-bcd55676c6ff")
+		(property "Reference" "NT8" (at 184.15 147.32 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Value" "GND-GNDPWR" (at 184.15 149.86 0) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad2.0mm" (at 186.69 153.67 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Datasheet" "" (at 186.69 153.67 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+		(property "Description" "Gate-driver local ground connection" (at 186.69 153.67 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+		(pin "1" (uuid "23ad9dd4-f10e-5c0f-9e5b-98ec71bc9e86"))
+		(pin "2" (uuid "0594eeab-7cd1-5efe-b123-d39613f01dea"))
+		(instances (project "nexus_drive" (path "/2d97709d-a8ce-4889-9b37-2fa808653238/b408431b-0e42-4242-b4c3-a4965027c029" (reference "NT8") (unit 1))))
+	)
+	(wire (pts (xy 30.48 43.18) (xy 30.48 34.29)) (stroke (width 0) (type default)) (uuid "59a354c6-0b9f-567e-b265-d342b9858695"))
+	(wire (pts (xy 30.48 34.29) (xy 46.99 34.29)) (stroke (width 0) (type default)) (uuid "a4e482dd-ab93-5af4-ab24-cc828e5e9a4a"))
+	(wire (pts (xy 30.48 50.8) (xy 46.99 50.8)) (stroke (width 0) (type default)) (uuid "3973a0bd-3bbb-56bf-811a-733d533802f2"))
+	(junction (at 46.99 50.8) (diameter 0) (color 0 0 0 0) (uuid "e883a7a6-cee2-5615-9145-ef6893db50de"))
+	(wire (pts (xy 184.15 153.67) (xy 177.8 153.67)) (stroke (width 0) (type default)) (uuid "d94ec893-7af6-5dca-bb02-054e6fbc58cb"))
+	(wire (pts (xy 189.23 153.67) (xy 195.58 153.67)) (stroke (width 0) (type default)) (uuid "aefc8015-9768-5018-8b9e-f07d30c77ad6"))
+	(global_label "GND" (shape input) (at 177.8 153.67 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid "1d40953a-bec8-5503-8577-4dab878da42d"))
+	(global_label "GNDPWR" (shape input) (at 195.58 153.67 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "89009541-e84b-5b8a-bba4-5d2b592dab44"))
+	(text "Place at U5 ground and exposed pad." (at 171.45 158.75 0) (effects (font (size 1.27 1.27)) (justify left top)) (uuid "c7c9d948-cd13-5f30-b804-d95bb0e43b3b"))
 )

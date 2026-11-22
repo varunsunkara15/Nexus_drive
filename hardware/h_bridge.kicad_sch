@@ -1972,7 +1972,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "moteus:POWER_M2.5"
+		(property "Footprint" "nexus_drive:PhasePad_1.91mm"
 			(at 187.96 105.41 0)
 			(hide yes)
 			(show_name no)

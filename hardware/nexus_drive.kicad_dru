@@ -1,0 +1,5 @@
+(version 1)
+# JLCPCB FR-4 capabilities, multilayer. Pad holes and routing vias have different drill spacing limits.
+(rule "JLCPCB pad hole spacing"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad'")
+  (constraint hole_to_hole (min 0.45mm)))
