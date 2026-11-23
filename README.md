@@ -72,66 +72,64 @@ The power stage in this repo has **no bulk / DC-link capacitor bank yet**. It is
 
 Guidance: rated **80 V or higher** (63 V is the bare minimum), capacitance several times the effective ceramic bank (e.g. 330–470 µF total), ESR ≈ 0.05–0.1 Ω, placed between the input connector and the half-bridges. **Tantalum is not recommended at this voltage:** tantalums need ~2× voltage derating (a >100 V part is hard to find), and they tend to fail short-circuit, which is a fire risk on a stiff 12S3P pack. Aluminium electrolytic or hybrid polymer is the safer choice. See [docs/power-stage.md](docs/power-stage.md) for the full overvoltage-protection requirements.
 
-## Schematic review (3 Nov 2026)
+## Schematic review (23 Nov 2026)
 
-This review covers the schematic and the first PCB placement at commit `5195f6f`: footprint assignment, the HC-05 header on J1, footprint import, and the `sensing` sheet. It was checked against the KiCad netlist, ERC and DRC. Blocks that are still to be drawn (logic supplies, DC-link, input protection) are planned work and are not reviewed.
+This review covers the schematic at commit `200ccbd`. It was checked against the KiCad netlist, ERC, DRC (schematic parity) and the pin plan in `firmware/STM32G474 Pinout.ioc`. Item numbers continue from the 3 Nov review, so they can be tracked.
 
 **Design intent: the board is deliberately over-specified.** The first target motors are the CubeMars **RO80 KV105** (≈15 A rated, ~50 A peak) and **RO100 KV55** (≈20 A rated, ~62 A peak) at 48 V. The power stage keeps moteus x1's 120 A-class parts so that larger motors can be used later.
 
-**Checks:** ERC has 0 errors and 9 library warnings. PCB-to-schematic parity has 0 issues.
+**Checks:**
+- **ERC:** 0 errors, plus 9 library-symbol warnings.
+- **Schematic parity with the PCB:** 0 issues.
+- **Pin plan:** all 40 pins in the `.ioc` match the schematic net for net. That covers PWM on TIM1, nFAULT on TIM1_BKIN, the three phase currents on ADC1/2/3, SPI4 for the DRV8353, FDCAN1 and USART3.
 
-### ✅ Done well
-- **All 115 parts have footprints, and the packages match the parts:** LQFP-80 for the STM32G474ME, RTA-40 for the DRV8353SRTA, PQFN 8×8 for the FETs, QFN-16 3×3 for the MA702 and SOIC-8 for the TCAN1042.
-- **J1 (HC-05) is crossed over correctly:** MCU TX (PB10) goes to the module's RXD, and MCU RX (PE15) to its TXD.
-- **The sensing sheet is well thought out:**
-  - The VBUS divider (99.8k / 4.7k) gives 2.27 V at 50.4 V and reaches 3.3 V full scale at about 73 V, so it can see regen overvoltage.
-  - The top resistor is split into two, so each 0603 sees only about 25 V.
-  - The three phase-voltage dividers use the same ratio, filtered at about 3.5 kHz.
-  - The thermistors have 1 % pull-ups and filter caps, and every signal goes to an ADC pin.
-- Carried over from earlier work:
-  - The power stage is copied from moteus x1 pin for pin.
-  - DRV8353 nFAULT goes to TIM1_BKIN, so a driver fault stops PWM in hardware.
-  - Each phase current has its own ADC.
-  - CAN-FD has a choke, ESD protection and jumper-selectable termination.
-  - Encoders have ESD protection and series resistors.
+### ✅ Fixed since 3 Nov
+| Item | Now |
+|---|---|
+| N1 | C23 (VGLS) returns to `GNDPWR`. |
+| N2 | NT8 joins `GND` and `GNDPWR` once, under the driver. |
+| N5 | C38 (22 µF 25 V) added on +12 V (VM). |
+| N6 | The phase pads were replaced (`PhasePad_1.91mm`), and the drill errors are gone. |
+| N7 | R39 (1k) and D7 (ESD) protect the motor thermistor input. Firmware must subtract 1k from the reading. |
+| N11 (part) | The thermistor pull-ups moved to `+3VA`. |
+| N12 | PTC fuses F1/F2 feed the external encoder power. |
+| N14 | `nexus_drive` is now in `sym-lib-table`. |
+| N16 | The board outline exists. |
+| N17 (part) | PD10 is labelled `DRV_nCS` in the `.ioc`. |
+| — | External connectors are merged as the mechanics require: J3 (CAN in/out + motor thermistor) and J5 (both encoder ports). The pinouts in `CHANGES_connectors.txt` match the netlist. |
 
-### 🔴 Fix before routing
-- [ ] **N1: the VGLS capacitor C23 returns to `GND`.** VGLS supplies the low-side gate drive, so C23 must return to **`GNDPWR` at the DRV8353 PGND pin**. On `GND`, the gate current crosses between the two grounds every PWM cycle.
-- [ ] **N2: `GND` and `GNDPWR` aren't joined anywhere.** NT1 joins only `GNDA` to `GND`, and NT3/5/7 are the shunt sense connections, so they don't count. Add **one net tie under the driver**.
-- [ ] **N3: check FL1's pin numbers against the TDK ACT1210D datasheet.** The symbol uses windings 1–4 and 2–3. If TDK numbers them differently, the choke either shorts CANH to CANL or breaks the CAN line. Check the land pattern at the same time. Neither has been verified yet.
-- [ ] **N4: placement has started before the parts that set the layout exist.** The DC-link capacitors, input connector and protection, and the logic supplies (+12 V, +5 V, +3.3 V) aren't drawn yet. Those decide where the power stage, the ground tie and the heat paths go. Finish them, plus N5, before placing parts seriously.
+### 🔴 Must add before the PCB can work
+- [ ] **N20: the board has no power input.** Nothing on the PCB connects to the battery bus: there's no XT60 or power pads for `V+`, and none for `GNDPWR`. Today `V+` only reaches the FET drains, C21/C24-C26, R24 and the DRV8353 VDRAIN pin. Add the input connector, or solder pads sized for the cable, matching the PDB's XT60 outputs.
+- [ ] **N21: no supply makes the logic rails.** `+12V` (DRV8353 VM), `+5V` (TCAN1042, HC-05) and `+3V`/`+3VA` (MCU, encoders, DRV8353 VREF) all have consumers but **no source**, so the board can't power up. Suggested power tree, with a rough budget:
+
+  | Rail | Feeds | Approx. load | Suggested source |
+  |---|---|---|---|
+  | +12 V | DRV8353 VM (gate drive about 35 mA at 30 kHz, plus quiescent) | ~60–100 mA | Synchronous buck from `V+`, rated for **≥ 80 V input** (regen spikes) |
+  | +5 V | TCAN1042 (~70 mA when dominant), HC-05 (~40 mA) | ~120 mA | Buck or LDO from +12 V |
+  | +3.3 V | STM32G474 at 160 MHz, MA702, two external encoders, TCAN VIO | ~150–200 mA | LDO from +5 V |
+
+  Keep the whole board's idle draw under about **2 W**. During PDB precharge, all 12 drivers together must draw less than about 0.6 A.
+- [ ] **N22: DC-link capacitance is still only 3 × 0.1 µF.** This is the "bulk capacitance" note above, still open. Add the ceramic bank close to each half-bridge, plus bulk at the input (aluminium electrolytic or hybrid polymer, rated 80 V or more). Size the ceramics for ripple current: roughly half the phase RMS current of the largest motor you plan to use.
+- [ ] **N23: input overvoltage protection is missing,** and the FETs are only **80 V** parts (FDMT80080DC) on a 50.4 V bus. Add a TVS from `V+` to `GNDPWR` with standoff at or above 50.4 V and a clamping voltage below 80 V at the expected surge current. That margin is tight, so a TVS alone handles only plug-in spikes. **Regen must be limited in firmware** using the VBUS reading, with a brake resistor if needed.
+- [ ] **N4: stop routing until N20–N23 are drawn.** The PCB is already routed (147 connections left), but the input connector, bulk capacitors and three regulators need space near the power stage and the ground tie. Adding them now will move parts that are already routed.
+- [ ] **N3: FL1 (TDK ACT1210D) pinout still not verified.** The symbol and footprint use windings 1–4 and 2–3 (pads 1/2 on one side, 4/3 on the other). If TDK numbers them differently, CANH and CANL are shorted through the choke. Check the pin drawing in the datasheet on TDK's ACT1210D product page before ordering.
 
 ### 🟠 Should fix
-- [ ] **N5: VM bulk capacitance.** +12 V (the DRV8353 VM pin) has only 0.1 µF (C19). Add the local bulk capacitor the DRV8353 datasheet recommends, next to the pin.
-- [ ] **N6: drill size on the phase output pads.** X1–X3 each have 20 vias with 0.254 mm holes, but the board rule minimum is 0.3 mm, giving 60 DRC errors. Either confirm the fab can drill 0.25 mm and change the rule, or enlarge the holes to 0.3 mm. These vias carry phase current, so their size and count matter for the over-spec rating (N13).
-- [ ] **N7: protect the motor thermistor input.** J7 leaves the board next to the phase wires and goes straight to the ADC with only 100 nF. Add about 1k in series and an ESD clamp. A motor thermistor sits inside the windings, so an insulation fault can put bus voltage on that ADC pin.
-- [ ] **N8: HC-05 on J1.**
-  - Nothing supplies `+5V` yet. Include the HC-05 (up to about 40 mA while pairing) and the TCAN1042 (about 70 mA) in the 5 V budget.
-  - J1 is a male pin header and the HC-05 module also has male pins, so it needs a cable or a socket.
-  - Treat Bluetooth as a bench and debug link only. CAN is the main bus for 12 joints.
-- [ ] **N9: current-sense gain must be set per motor.** With the 0.5 mΩ shunts, gain 40 gives ±70 A full scale, for the RO80 and RO100. Gain 20 gives ±140 A, for larger motors. Make the gain a per-motor firmware parameter.
-- [ ] **N10: gate-drive supply versus PWM frequency.** Six FDMT80080DC gates (195 nC each) at 30 kHz need about 35 mA. Check that against the DRV8353 charge-pump and VGLS limits before fixing the PWM frequency, and include it in the +12 V budget.
-- [ ] **N11: sensing offset and ratiometric reference.** The current-sense amplifier zero (VREF/2) and the thermistor pull-ups run from `+3V`, but the ADC reference is `+3VA`. Calibrate the offsets at startup with the gates off, or move them to `+3VA`.
-- [ ] **N12: external encoders.**
-  - J903/J904 take power from the MCU's own `+3V`, so a shorted encoder cable resets the MCU. Add a polyfuse, a load switch or a separate LDO.
-  - Keep single-ended SPI cables short and slow, or use RS-485/SSI for the joint-output encoder.
-- [ ] **N13: thermal design for the over-spec rating.** The 120 A-class headroom only holds with:
-  - heavy copper for V+, the phases and `GNDPWR`
-  - a thermal path for the Dual Cool FETs
-  - shunts sized for the largest motor you plan to use
+- [ ] **N24: C20 (DVDD, 1 µF) returns to `GNDPWR`.** The DRV8353 datasheet places the DVDD capacitor to **AGND** (`GND` here). Move it to `GND` next to pin 25.
+- [ ] **N11 (rest):** the DRV8353 VREF (pin 24) still runs from `+3V`, while the ADC reference is `+3VA`. Calibrate the current-sense offsets at startup with the gates off, or move VREF to `+3VA`.
+- [ ] **N12 (rest):** the PTCs take hundreds of milliseconds to trip. A hard short on an encoder cable can still pull `+3V` down long enough to reset the MCU. That's acceptable for now. A separate small LDO for the encoder ports would remove it.
+- [ ] **D7:** the value is only "ESD 5V bidir". Pick a real part number so the BOM can be made.
+- [ ] **N9, N10 and N13 are carried over and still open:** current-sense gain per motor (gain 40 = ±70 A, gain 20 = ±140 A with the 0.5 mΩ shunts); gate-drive budget against PWM frequency; thermal design for the over-spec rating.
 
 ### 🟡 Housekeeping
-- [ ] **N14:** `sym-lib-table` has no `nexus_drive` entry, which causes 3 ERC warnings.
-- [ ] **N15:** The U6 footprint differs from the library copy. Update it from the library, or note why it's custom.
-- [ ] **N16:** Before routing, add the board outline. The 196 silkscreen warnings from placement can be cleaned up later.
-- [ ] **N17:** Check the following:
-  - The SWD header order (VCC, SWDIO, SWCLK, NRST, GND) isn't a standard pinout. Match it to your programmer.
-  - The 12 pF crystal caps should suit the 16 MHz crystal's load capacitance.
-  - PD10 (DRV chip select) has no label in the `.ioc`.
-- [ ] **N18:** Consider split CAN termination (2 × 60 Ω + ~4.7 nF to GND) for better EMC on a long robot bus.
-- [ ] **N19:** Commit the literature review (moteus, ODrive, ODESC, ODRI) to `docs/`.
+- [ ] **N8:** the HC-05 needs a cable or socket, since J1 is a male header. Use it as a bench link only.
+- [ ] **N15:** the U6 footprint still differs from the library copy (1 DRC warning). Update it, or note why it's custom.
+- [ ] **N17 (rest):** match the SWD header to your programmer. Check that the 12 pF crystal caps suit the new 3225 crystal's load capacitance.
+- [ ] **N18:** consider split CAN termination (2 × 60 Ω + about 4.7 nF to GND).
+- [ ] **N19:** commit the literature review (moteus, ODrive, ODESC, ODRI) to `docs/`.
+- [ ] The status line at the top of this README still says "PCB layout not started".
 
-**Most important:** N1, N2 and N4. Get the grounding and the missing power blocks into the schematic before routing.
+**Most important:** N20–N23. Without an input connector, logic supplies, DC-link capacitors and input protection, the board can't be powered. Draw them before routing any further.
 
 ## Getting started
 
