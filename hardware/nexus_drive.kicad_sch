@@ -478,16 +478,7 @@
 		)
 		(uuid "283fa458-5ff3-4e51-bb66-a809b0082908")
 	)
-	(wire
-		(pts
-			(xy 327.66 195.58) (xy 335.28 195.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3bb8d99c-fb90-49b4-8eb3-d7468526b128")
-	)
+	(wire (pts (xy 293.37 208.28) (xy 299.72 208.28)) (stroke (width 0) (type default)) (uuid "08cb461f-70b2-4aee-8033-2d2ddb69ef50"))
 	(wire
 		(pts
 			(xy 293.37 177.8) (xy 300.99 177.8)
@@ -1938,16 +1929,7 @@
 		)
 		(uuid "4d589db9-985c-46f9-a19a-42590bbc138e")
 	)
-	(label "TEMP_MOTOR"
-		(at 327.66 195.58 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d9706d1c-27f2-4f10-8e54-b61ee73763c4")
-	)
+	(label "TEMP_MOTOR"  (at 299.72 208.28 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "784d2779-129c-4995-9ed6-488610f30e70"))
 	(label "GLC"
 		(at 259.08 60.96 180)
 		(effects
@@ -3694,16 +3676,7 @@
 				(justify left)
 			)
 		)
-		(pin "TEMP_MOTOR" bidirectional
-			(at 335.28 195.58 180)
-			(uuid "0db751fb-1b2e-429f-8597-2d1d107ad7ab")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
+		
 		(instances
 			(project "nexus_drive"
 				(path "/2d97709d-a8ce-4889-9b37-2fa808653238"
@@ -4215,7 +4188,18 @@
 				)
 			)
 		)
-	)
+	
+	(pin "TEMP_MOTOR" bidirectional
+			(at 293.37 208.28 0)
+			(uuid "0db751fb-1b2e-429f-8597-2d1d107ad7ab")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+)
 	(sheet
 		(at 63.5 152.4)
 		(size 25.4 12.7)
