@@ -194,7 +194,7 @@ With an **absolute** encoder (our MA702), this offset is stable across power cyc
 
 ## 5. Keep, adapt or drop for Nexus Drive
 
-Our case: **one motor** (RO100), **one absolute SPI encoder** (MA702GQ), **three shunts** (ODrive v3 has two), **CAN-FD** to the robot's main controller, joint torque/position control for a humanoid.
+Our case: **one motor** (CubeMars RO100 KV50), **one absolute SPI encoder** (MA702GQ), **three shunts** (ODrive v3 has two), **CAN-FD** to the robot's main controller, joint torque/position control for a humanoid.
 
 ### Keep (the core; rewrite it in our own style)
 
@@ -276,6 +276,6 @@ Each step can be tested on the bench before the next one:
 
 ## Open questions for the team
 
-- **Motor:** the README lists the **RO100 KV55**. Confirm whether the motor is KV50 or KV55, and get its pole-pair count, phase R/L and Kt from the datasheet. Kt ≈ 8.27 / KV (N·m/A) is a usable first estimate.
+- **Motor:** CubeMars **RO100 KV50** (confirmed; the README still says KV55). Get its pole-pair count, phase R/L and Kt from the datasheet. Kt ≈ 8.27 / KV ≈ **0.165 N·m/A** is a usable first estimate until R, L and Kt are measured.
 - **Loop rate and PWM frequency:** decides the CPU budget and gate-drive load.
 - **CAN-FD message format:** agree on it with whoever writes the main controller.
